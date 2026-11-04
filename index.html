@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th" class="locked">
+<html lang="th">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,9 +8,9 @@
 <meta name="description" content="การ์ดเชิญงานมงคลสมรส บงกช &amp; ศุภกร วันเสาร์ที่ 13 กุมภาพันธ์ 2570 ณ ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์ จ.หนองบัวลำภู">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Anuphan:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Anuphan:wght@300;400;500;600&family=Mrs+Saint+Delafield&display=swap">
 <style>
-/* Layout: แถบเต็มความกว้างสลับครีม / เขียวหมอก ตามธีมสีของการ์ด เนื้อหาตรงกลาง ใบไม้ลายเส้นประดับขอบ */
+/* Layout: เปิดด้วยภาพเต็มจอ + เครื่องเล่นเพลง แล้วแถบเนื้อหาสลับครีม / เขียวหมอก / แถบเข้มของแกลเลอรี */
 :root {
   --paper: #F8F6F1;
   --paper-2: #F2EEE5;
@@ -18,6 +18,7 @@
   --sage: #A6C3A5;
   --moss: #687665;
   --forest: #46574A;
+  --night: #1F2621;
   --cream: #F2E9DA;
   --rose: #B76A64;
   --ink: #4E403B;
@@ -40,6 +41,7 @@ body {
 img, svg { max-width: 100%; }
 img { display: block; }
 a { color: inherit; }
+button { font: inherit; }
 :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
 p { margin: 0; }
 
@@ -58,20 +60,21 @@ h1, h2, h3 { font-family: var(--display); font-weight: 500; color: var(--forest)
 h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .sub-th { color: var(--muted); font-size: .95rem; }
 .rule { width: 44px; height: 1px; background: var(--forest); opacity: .5; border: 0; margin: 2px 0; }
-.label { font-family: var(--display); font-weight: 600; letter-spacing: .3em; text-transform: uppercase; font-size: .8rem; color: var(--muted); }
-.script { font-family: var(--script); font-weight: 400; color: var(--ink); line-height: .9; }
+.caps { font-family: var(--display); font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--ink); }
+.script { font-family: var(--script); font-weight: 400; line-height: .9; }
 
-.sprig { position: absolute; width: 120px; height: 120px; color: var(--moss); pointer-events: none; z-index: 0; opacity: .75; }
+.sprig { position: absolute; width: 120px; height: 120px; color: var(--moss); pointer-events: none; z-index: 0; opacity: .7; }
 .sprig svg { width: 100%; height: 100%; display: block; }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font: inherit; font-weight: 500; font-size: 1rem; padding: 11px 28px; border-radius: 999px;
+  font-weight: 500; font-size: 1rem; padding: 11px 28px; border-radius: 999px;
   cursor: pointer; text-decoration: none; transition: transform .2s ease, background .2s ease;
 }
 .btn svg { width: 18px; height: 18px; flex: none; }
 .btn-solid { background: var(--forest); color: var(--paper); border: 1px solid var(--forest); }
 .btn-solid:hover { background: #38473B; transform: translateY(-1px); }
+.btn-solid[disabled] { opacity: .6; cursor: progress; transform: none; }
 .btn-line { background: transparent; color: var(--forest); border: 1px solid var(--forest); }
 .btn-line:hover { background: rgba(70,87,74,.07); transform: translateY(-1px); }
 
@@ -79,26 +82,69 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .heart-rule i { width: 28px; height: 1px; background: var(--ink); opacity: .4; }
 .heart-rule svg { width: 14px; height: 14px; color: var(--rose); }
 
-/* ---------- Hero ---------- */
-.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; align-items: center; padding-block: 32px 0; }
-.hero-text { display: grid; justify-items: center; text-align: center; gap: 10px; padding-block: 16px 44px; }
-.mono { width: 168px; height: auto; }
-.kindly { font-family: var(--display); font-style: italic; font-size: 1.15rem; letter-spacing: .14em; color: var(--muted); line-height: 1.4; }
-.names { display: grid; justify-items: center; margin: 4px 0 2px; }
-.names .script { font-size: clamp(4rem, 9.5vw, 6.2rem); }
-.names .and { font-family: var(--script); font-size: 2.2rem; color: var(--rose); line-height: .8; margin: -4px 0 -2px; }
-.names-th { font-size: .98rem; color: var(--muted); }
-.datebar { display: flex; align-items: center; gap: 16px; font-family: var(--display); font-size: 1.9rem; letter-spacing: .12em; color: var(--ink); font-variant-numeric: lining-nums tabular-nums; margin-top: 6px; }
-.datebar i { width: 1px; height: 36px; background: var(--sage); }
-.scroll { display: grid; justify-items: center; gap: 6px; margin-top: 10px; text-decoration: none; color: var(--muted); }
-.scroll i { width: 1px; height: 30px; background: var(--muted); opacity: .5; }
-.scroll small { font-family: var(--display); letter-spacing: .3em; font-size: .7rem; font-weight: 600; }
-.scroll svg { width: 14px; height: 14px; animation: bob 2.2s ease-in-out infinite; }
-@keyframes bob { 50% { transform: translateY(4px); } }
-.arch { border-radius: 999px 999px 0 0; overflow: hidden; aspect-ratio: 4 / 5; width: 100%; max-width: 100%; background: var(--mist); }
-.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
-.hero .arch { align-self: end; }
-.hero .sprig.l { left: -26px; bottom: -6px; width: 150px; height: 150px; transform: scaleX(-1) rotate(-10deg); }
+/* ---------- Hero: photo + music player ---------- */
+.hero { position: relative; height: clamp(600px, 92vh, 900px); background: var(--night); color: var(--white); overflow: hidden; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,24,21,.35) 0%, rgba(20,24,21,0) 26%, rgba(20,24,21,.05) 48%, rgba(20,24,21,.72) 100%); }
+.hero-inner {
+  position: absolute; inset: 0; z-index: 1; display: grid; align-content: space-between; justify-items: center; text-align: center;
+  padding: calc(28px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(22px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+}
+.hero-top { display: grid; justify-items: center; gap: 4px; }
+.hero-top .caps { color: var(--white); font-size: .78rem; letter-spacing: .4em; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+.hero-bottom { display: grid; justify-items: center; gap: 6px; width: min(100%, 520px); }
+.hero h1 { color: var(--white); font-weight: 300; font-size: clamp(2.6rem, 8.4vw, 4.6rem); letter-spacing: .04em; text-transform: uppercase; text-shadow: 0 2px 18px rgba(0,0,0,.35); line-height: 1; }
+.hero h1 .amp { font-style: italic; text-transform: none; font-weight: 400; padding-inline: .1em; }
+.hero .married { font-family: var(--script); font-size: clamp(2.3rem, 7vw, 3.2rem); color: var(--cream); margin-top: -.05em; text-shadow: 0 1px 10px rgba(0,0,0,.4); }
+
+.player { width: 100%; display: grid; gap: 8px; margin-top: 6px; }
+.song-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: .86rem; color: rgba(255,255,255,.85); }
+.song-meta b { font-weight: 500; color: var(--white); }
+.bar { position: relative; height: 18px; display: grid; align-items: center; cursor: pointer; touch-action: none; }
+.bar::before { content: ""; height: 3px; border-radius: 3px; background: rgba(255,255,255,.35); }
+.bar .fill { position: absolute; left: 0; height: 3px; border-radius: 3px; background: var(--white); width: 0; }
+.bar .knob { position: absolute; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: var(--white); left: 0; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+.times { display: flex; justify-content: space-between; font-size: .74rem; color: rgba(255,255,255,.75); font-variant-numeric: tabular-nums; margin-top: -6px; }
+.controls { display: flex; align-items: center; justify-content: center; gap: clamp(14px, 6vw, 30px); }
+.ctl { width: 40px; height: 40px; border: 0; background: transparent; color: var(--white); cursor: pointer; display: grid; place-items: center; border-radius: 50%; opacity: .9; }
+.ctl svg { width: 22px; height: 22px; }
+.ctl:hover { opacity: 1; background: rgba(255,255,255,.1); }
+.ctl.small svg { width: 19px; height: 19px; }
+.ctl[aria-pressed="false"] { opacity: .5; }
+.ctl.play { width: 60px; height: 60px; background: var(--white); color: var(--night); opacity: 1; box-shadow: 0 4px 18px rgba(0,0,0,.3); }
+.ctl.play svg { width: 26px; height: 26px; }
+.ctl.play .pause-i { display: none; }
+.ctl.play[aria-pressed="true"] .play-i { display: none; }
+.ctl.play[aria-pressed="true"] .pause-i { display: block; }
+.ctl.play:hover { background: var(--cream); }
+.hint { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: .86rem; color: rgba(255,255,255,.88); }
+.hint i { width: 18px; height: 18px; border-radius: 50%; background: var(--white); color: var(--night); display: inline-grid; place-items: center; font-style: normal; }
+.hint i svg { width: 9px; height: 9px; }
+.no-song { font-size: .82rem; color: rgba(255,255,255,.8); }
+.strip-band { background: var(--forest); color: var(--paper); }
+.strip-band .wrap { padding-block: 10px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; font-family: var(--display); font-weight: 600; }
+.strip-band svg { width: 12px; height: 12px; color: var(--rose); }
+
+/* floating music button */
+.music-fab {
+  position: fixed; z-index: 40; width: 50px; height: 50px; border-radius: 50%;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  border: 1px solid rgba(255,255,255,.6); background: var(--forest); color: var(--paper);
+  box-shadow: 0 6px 20px rgba(46,58,49,.3); cursor: pointer; display: grid; place-items: center;
+}
+.music-fab svg { width: 22px; height: 22px; }
+.music-fab .off { display: none; }
+.music-fab[aria-pressed="false"] .on { display: none; }
+.music-fab[aria-pressed="false"] .off { display: block; }
+.music-fab[aria-pressed="true"] svg.on { animation: spin 6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Welcome ---------- */
+.mono { width: 150px; height: auto; }
+.welcome .caps { font-size: clamp(.9rem, 2.6vw, 1.1rem); line-height: 1.9; }
+.datebar { display: flex; align-items: center; gap: 22px; font-family: var(--display); font-size: clamp(1.7rem, 5vw, 2.2rem); letter-spacing: .2em; color: var(--ink); font-variant-numeric: lining-nums tabular-nums; font-weight: 500; }
+.datebar i { width: 1px; height: 48px; background: var(--ink); opacity: .5; }
+.join { font-size: clamp(.78rem, 2.4vw, .92rem) !important; letter-spacing: .26em !important; }
 
 /* ---------- Countdown ---------- */
 .count { display: grid; grid-template-columns: repeat(4, minmax(0, 92px)); gap: 12px; justify-content: center; margin-top: 4px; }
@@ -107,7 +153,7 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .count span { font-size: .82rem; color: var(--muted); }
 .count-done { font-family: var(--display); font-size: 1.5rem; color: var(--forest); }
 
-/* ---------- Invitation ---------- */
+/* ---------- Invitation + bride & groom ---------- */
 .families { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px 28px; align-items: center; width: 100%; max-width: 760px; margin-top: 6px; }
 .fam { display: grid; gap: 2px; min-width: 0; }
 .fam .side { font-weight: 500; letter-spacing: .06em; font-size: .82rem; color: var(--moss); margin-bottom: 6px; }
@@ -117,15 +163,19 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .fam.groom { text-align: left; }
 .fam-and { font-size: 1.1rem; color: var(--muted); }
 .invite-text { max-width: 34em; font-size: 1.04rem; margin-top: 10px; }
-.couple-names { display: grid; justify-items: center; gap: 2px; margin-top: 6px; }
-.couple-names .cn { font-size: clamp(1.35rem, 3.6vw, 1.75rem); font-weight: 500; color: var(--ink); line-height: 1.4; }
-.couple-names .cn small { font-weight: 400; color: var(--muted); font-size: .8em; }
-.couple-names .role { font-family: var(--display); font-style: italic; color: var(--moss); font-size: 1rem; letter-spacing: .08em; }
-.couple-names svg.big-heart { width: 46px; height: 42px; color: var(--rose); margin: 8px 0; }
-.when-card { margin-top: 18px; display: grid; grid-template-columns: auto 1px auto; gap: 22px; align-items: center; text-align: left; }
+.pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; width: 100%; max-width: 680px; margin-top: 8px; }
+.person { display: grid; justify-items: center; gap: 10px; min-width: 0; }
+.person .ph { width: 100%; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 999px 999px 10px 10px; overflow: hidden; background: var(--mist); box-shadow: 0 0 0 5px var(--paper), 0 0 0 6px var(--line); }
+.person .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+.person .role { font-family: var(--display); font-style: italic; color: var(--moss); font-size: 1rem; letter-spacing: .1em; }
+.person .th { font-size: clamp(1rem, 2.8vw, 1.2rem); font-weight: 500; line-height: 1.45; }
+.person .th small { display: block; font-weight: 400; color: var(--muted); font-size: .86em; }
+.person .en { font-family: var(--display); font-weight: 600; letter-spacing: .24em; font-size: .78rem; color: var(--muted); }
+.pair-mid { display: grid; justify-items: center; gap: 6px; color: var(--muted); font-size: .95rem; }
+.pair-mid svg { width: 38px; height: 34px; color: var(--rose); }
+.when-card { margin-top: 22px; display: grid; grid-template-columns: auto 1px auto; gap: 22px; align-items: center; text-align: left; }
 .when-card .day { display: grid; justify-items: center; line-height: 1.1; color: var(--ink); }
 .when-card .day b { font-family: var(--display); font-weight: 500; font-size: 3.6rem; line-height: 1; font-variant-numeric: lining-nums; }
-.when-card .day span { font-size: 1rem; }
 .when-card i { align-self: stretch; background: var(--ink); opacity: .35; }
 .when-card .place { display: grid; gap: 2px; }
 .when-card .place strong { font-weight: 500; font-size: 1.08rem; }
@@ -142,12 +192,16 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .tl-what { font-size: 1.04rem; }
 
 /* ---------- Venue ---------- */
-.venue .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: center; }
+.venue-head { display: flex; align-items: center; gap: 12px; }
+.venue-head svg { width: 34px; height: 40px; color: var(--moss); }
+.venue-head h2 { letter-spacing: .08em; }
+.map-frame { width: 100%; max-width: 760px; background: var(--moss); border-radius: 22px; padding: 12px 12px 14px; display: grid; gap: 10px; box-shadow: 0 10px 30px rgba(46,58,49,.18); }
+.map { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; background: #EDF1EA; }
+.map svg, .map iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; }
+.map-label { font-family: var(--display); font-weight: 600; letter-spacing: .28em; color: var(--paper); font-size: .86rem; text-transform: uppercase; }
 .venue-name { font-family: var(--display); font-size: 1.6rem; font-weight: 500; color: var(--ink); line-height: 1.2; }
 .venue-th { font-size: 1.04rem; }
 .venue-addr { color: var(--muted); font-size: .95rem; }
-.map { border-radius: 14px; overflow: hidden; border: 3px solid rgba(255,255,255,.8); box-shadow: 0 6px 24px rgba(70,87,74,.14); aspect-ratio: 16 / 10; max-width: 100%; }
-.map svg { display: block; width: 100%; height: 100%; }
 
 /* ---------- Color theme ---------- */
 .swatches { display: flex; flex-wrap: wrap; gap: 18px 16px; justify-content: center; margin-top: 8px; }
@@ -156,41 +210,81 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .swatch span { font-size: .8rem; color: var(--muted); line-height: 1.3; }
 
 /* ---------- Gallery ---------- */
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; width: 100%; margin-top: 10px; }
-.gallery button { padding: 0; border: 0; background: var(--mist); cursor: zoom-in; aspect-ratio: 1240 / 1748; overflow: hidden; border-radius: 4px; max-width: 100%; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-.gallery button:hover img { transform: scale(1.03); }
-.lightbox {
-  position: fixed; inset: 0; z-index: 50; background: rgba(36,32,30,.9);
-  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px;
-  padding: calc(16px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
-}
-.lightbox img { max-height: calc(100vh - 80px); max-width: 100%; width: auto; margin: 0 auto; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
-.lb-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.08); color: var(--white); cursor: pointer; display: grid; place-items: center; }
-.lb-btn svg { width: 20px; height: 20px; }
-.lb-close { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); }
+.gallery-band { background: var(--night); color: var(--paper); }
+.gallery-band .wrap { padding-block: 40px 56px; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; max-width: 760px; }
+.trio figure { position: relative; margin: 0; aspect-ratio: 3 / 4; overflow: hidden; max-width: 100%; }
+.trio img { width: 100%; height: 100%; object-fit: cover; }
+.trio b { position: absolute; left: 0; right: 0; bottom: -.06em; text-align: center; font-family: var(--display); font-weight: 600; font-size: clamp(3rem, 12vw, 6.4rem); line-height: .8; color: var(--white); text-shadow: 0 4px 18px rgba(0,0,0,.35); font-variant-numeric: lining-nums; }
+.gallery-band .welcome-caps { font-family: var(--display); font-weight: 600; letter-spacing: .3em; font-size: .74rem; color: rgba(248,246,241,.75); margin-top: 6px; }
+.gallery-band .ever { font-family: var(--script); font-size: clamp(2.6rem, 8vw, 3.8rem); color: var(--paper); line-height: 1; }
+.gallery-band .tag { font-family: var(--display); font-weight: 600; letter-spacing: .2em; font-size: 1.05rem; }
+.stack { display: grid; gap: 14px; width: 100%; max-width: 620px; margin-top: 18px; }
+.stack img { width: 100%; height: auto; border-radius: 3px; background: #2B332E; }
 
 /* ---------- RSVP ---------- */
-.rsvp .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-items: center; }
-.rsvp .illust { justify-self: center; width: min(100%, 250px); height: auto; }
-.rsvp form { width: min(100%, 420px); display: grid; gap: 12px; margin-top: 6px; }
-.field { position: relative; }
-.field > svg { position: absolute; left: 14px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
-.field input, .field select {
-  width: 100%; font: inherit; font-size: .95rem; color: var(--ink); background: var(--white);
-  border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px 11px 44px; appearance: none; -webkit-appearance: none;
+.rsvp-head { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: end; width: 100%; max-width: 620px; text-align: left; }
+.rsvp-head .illust { width: 92px; height: auto; }
+.rsvp-head h2 { font-size: clamp(1.7rem, 4.6vw, 2.3rem); }
+.rsvp-head p { color: var(--muted); font-size: .95rem; }
+.form { width: 100%; max-width: 620px; display: grid; gap: 22px; text-align: left; background: var(--white); border-radius: 18px; padding: clamp(18px, 4vw, 30px); box-shadow: 0 8px 30px rgba(78,64,59,.08); }
+.q { display: grid; gap: 10px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.q > legend, .q > label.ql { font-weight: 600; font-size: 1rem; color: var(--ink); padding: 0; margin-bottom: 10px; }
+.q > label.ql { margin-bottom: 0; }
+.q .opt-note { font-weight: 400; color: var(--muted); font-size: .86rem; }
+.text-in, .text-area {
+  width: 100%; font-size: 1rem; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
 }
-.field select { padding-right: 40px; cursor: pointer; }
-.field .chev { left: auto; right: 14px; width: 16px; height: 16px; }
-.field input:focus, .field select:focus { outline: none; border-color: var(--forest); }
-.field input::placeholder { color: #9A908A; }
-.rsvp .btn { width: 100%; }
-.thanks { background: var(--white); border-radius: 14px; padding: 18px 22px; width: min(100%, 420px); display: grid; gap: 4px; }
-.thanks strong { font-family: var(--display); font-size: 1.5rem; font-weight: 500; color: var(--forest); }
-.err { color: #9B2C24; font-size: .88rem; }
+.text-area { min-height: 110px; resize: vertical; line-height: 1.6; }
+.text-in:focus, .text-area:focus { outline: none; border-color: var(--forest); background: var(--white); }
+.counter { font-size: .78rem; color: var(--muted); text-align: right; margin-top: -4px; }
+.choices { display: grid; gap: 10px; }
+.choices.two { grid-template-columns: 1fr 1fr; }
+.choices.three { grid-template-columns: repeat(3, 1fr); }
+.choice { position: relative; min-width: 0; }
+.choice input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.choice span {
+  display: grid; gap: 2px; justify-items: center; text-align: center; height: 100%;
+  padding: 14px 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper);
+  font-size: .95rem; line-height: 1.35; transition: background .15s, border-color .15s;
+}
+.choice span em { font-style: normal; font-size: 1.4rem; line-height: 1; }
+.choice input:checked + span { background: var(--mist); border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+.choice input:focus-visible + span { outline: 2px solid var(--forest); outline-offset: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span { display: inline-block; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: .9rem; }
+.chip input:checked + span { background: var(--forest); border-color: var(--forest); color: var(--paper); }
+.chip input:focus-visible + span { outline: 2px solid var(--forest); outline-offset: 2px; }
+.stepper { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); border-radius: 999px; padding: 4px; background: var(--paper); justify-self: start; }
+.stepper button { width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--white); color: var(--forest); font-size: 1.3rem; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.stepper button:disabled { opacity: .4; cursor: default; }
+.stepper output { min-width: 64px; text-align: center; font-weight: 500; font-variant-numeric: tabular-nums; }
+.attend-only { display: grid; gap: 22px; }
+.err { color: #9B2C24; font-size: .9rem; }
+.form .btn { width: 100%; padding-block: 14px; font-size: 1.05rem; }
+.thanks { width: 100%; max-width: 620px; background: var(--white); border-radius: 18px; padding: 26px 22px; display: grid; justify-items: center; gap: 8px; text-align: center; }
+.thanks strong { font-family: var(--display); font-size: 1.8rem; font-weight: 500; color: var(--forest); }
+.thanks button { background: none; border: 0; color: var(--moss); text-decoration: underline; cursor: pointer; font-size: .9rem; }
+.store-note { font-size: .8rem; color: var(--muted); max-width: 620px; }
+
+/* wishes wall */
+.wishes-head { display: grid; justify-items: center; gap: 6px; margin-top: 18px; }
+.stats { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.stats span { background: var(--white); border-radius: 999px; padding: 4px 14px; font-size: .86rem; color: var(--ink); }
+.stats b { color: var(--forest); font-variant-numeric: tabular-nums; }
+.wishes { width: 100%; max-width: 900px; columns: 3 260px; column-gap: 14px; margin-top: 6px; text-align: left; }
+.wish { break-inside: avoid; background: var(--white); border-radius: 14px; padding: 16px 18px 14px; margin-bottom: 14px; display: grid; gap: 8px; box-shadow: 0 4px 16px rgba(78,64,59,.06); }
+.wish p { font-size: .98rem; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; }
+.wish p::before { content: "“"; font-family: var(--display); font-size: 2rem; line-height: 0; color: var(--sage); vertical-align: -.35em; margin-right: 4px; }
+.wish footer { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; font-size: .82rem; color: var(--muted); }
+.wish footer b { color: var(--ink); font-weight: 500; font-size: .9rem; }
+.wish .side-tag { color: var(--moss); }
+.wishes-empty { color: var(--muted); font-size: .95rem; background: var(--white); padding: 16px 20px; border-radius: 14px; }
 
 /* ---------- Footer ---------- */
-footer .wrap { padding-block: 48px 56px; }
+footer.site .wrap { padding-block: 48px 72px; }
 .foot-mono { width: 96px; height: auto; opacity: .9; }
 .love { font-family: var(--script); font-size: 2.6rem; color: var(--ink); line-height: 1; }
 .sorry { color: var(--muted); font-size: .95rem; }
@@ -198,60 +292,18 @@ footer .wrap { padding-block: 48px 56px; }
 .beat { animation: beat 2.4s ease-in-out infinite; transform-origin: center; }
 @keyframes beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.15); } 24% { transform: scale(1); } }
 
-/* ---------- Cover (tap to open, starts the music) ---------- */
-html.locked, html.locked body { overflow: hidden; }
-.cover {
-  position: fixed; inset: 0; z-index: 60; background: var(--paper);
-  display: grid; place-items: center; text-align: center; overflow-y: auto;
-  padding: calc(24px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
-  transition: opacity .8s ease, visibility .8s;
-}
-.cover.gone { opacity: 0; visibility: hidden; pointer-events: none; }
-.cover::before, .cover::after { content: ""; position: absolute; inset: 14px; border: 1px solid var(--line); border-radius: 999px 999px 18px 18px; pointer-events: none; }
-.cover::after { inset: 22px; opacity: .5; }
-.cover-inner { position: relative; display: grid; justify-items: center; gap: 12px; max-width: 420px; }
-.cover .mono { width: 150px; }
-.cover .names .script { font-size: clamp(3.4rem, 13vw, 5rem); }
-.cover .datebar { font-size: 1.5rem; }
-.cover-to { color: var(--muted); font-size: .95rem; }
-.cover .btn { margin-top: 10px; }
-.cover-song { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); }
-.cover-song svg { width: 14px; height: 14px; color: var(--rose); }
-
-/* ---------- Music button ---------- */
-.music {
-  position: fixed; z-index: 40; width: 52px; height: 52px; border-radius: 50%;
-  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  border: 1px solid rgba(255,255,255,.6); background: var(--forest); color: var(--paper);
-  box-shadow: 0 6px 20px rgba(46,58,49,.3); cursor: pointer; display: grid; place-items: center;
-}
-.music svg { width: 22px; height: 22px; }
-.music .off { display: none; }
-.music[aria-pressed="false"] .on { display: none; }
-.music[aria-pressed="false"] .off { display: block; }
-.music[aria-pressed="true"] { animation: spin 6s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.music-tip {
-  position: fixed; z-index: 40; right: calc(76px + env(safe-area-inset-right, 0px)); bottom: calc(28px + env(safe-area-inset-bottom, 0px));
-  background: var(--white); color: var(--ink); font-size: .8rem; padding: 4px 12px; border-radius: 999px;
-  box-shadow: 0 4px 14px rgba(46,58,49,.15); transition: opacity .6s ease; white-space: nowrap;
-}
-.music-tip.fade { opacity: 0; }
-
 @media (max-width: 760px) {
-  .venue .wrap, .rsvp .wrap { grid-template-columns: 1fr; }
-  .rsvp .illust { width: 170px; order: 2; }
-  .sprig { width: 84px; height: 84px; opacity: .55; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .sprig { width: 84px; height: 84px; opacity: .5; }
 }
 @media (max-width: 600px) {
-  .hero .wrap { grid-template-columns: 1fr; }
-  .hero-text { padding-block: 8px; }
-  .hero .arch { max-width: 360px; justify-self: center; }
-  .hero .sprig.l, .sprig.hide-sm { display: none; }
+  .sprig.hide-sm { display: none; }
   .wrap { padding-block: 48px; }
   .families { grid-template-columns: 1fr; gap: 10px; }
   .fam.bride, .fam.groom { text-align: center; }
+  .pair { gap: 8px; }
+  .pair-mid span { display: none; }
+  .pair-mid svg { width: 26px; height: 24px; }
+  .person .en { letter-spacing: .14em; font-size: .7rem; }
   .timeline { grid-template-columns: 1fr; gap: 18px; max-width: 340px; }
   .timeline::before { left: 97px; right: auto; top: 30px; bottom: 30px; width: 1px; height: auto; }
   .timeline li { grid-template-columns: 82px 32px 1fr; align-items: center; text-align: left; justify-items: start; padding: 0; }
@@ -262,16 +314,16 @@ html.locked, html.locked body { overflow: hidden; }
   .count b { font-size: 1.9rem; }
   .when-card { grid-template-columns: 1fr; gap: 10px; text-align: center; }
   .when-card i { height: 1px; width: 44px; justify-self: center; }
-  .lightbox { grid-template-columns: 1fr; }
-  .lb-prev, .lb-next { position: absolute; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
-  .lb-prev { left: 30%; } .lb-next { right: 30%; }
-  .lightbox img { max-height: calc(100vh - 150px); }
+  .choices.three { grid-template-columns: 1fr; }
+  .choices.three .choice span { grid-auto-flow: column; justify-content: start; gap: 10px; text-align: left; }
+  .datebar { gap: 14px; }
+  .strip-band .wrap { justify-content: center; }
+  .strip-band .wrap span:last-child { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .scroll svg, .beat, .music[aria-pressed="true"] { animation: none; }
-  .cover { transition: none; }
-  .btn, .gallery img { transition: none; }
+  .beat, .music-fab[aria-pressed="true"] svg.on { animation: none; }
+  .btn, .choice span { transition: none; }
 }
 </style>
 </head>
@@ -294,66 +346,79 @@ html.locked, html.locked body { overflow: hidden; }
         </g>
       </g>
     </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="13.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></g></symbol>
   </defs>
 </svg>
 
+<audio id="song" src="music/love-song.mp3" preload="metadata"></audio>
 
-<!-- ============ COVER: tap to open the invitation (starts the song) ============ -->
-<div class="cover" id="cover" role="dialog" aria-modal="true" aria-labelledby="cover-title">
-  <div class="cover-inner">
-    <img class="mono" src="images/monogram.webp" width="380" height="300" alt="">
-    <p class="kindly">the wedding of</p>
-    <h2 class="names" id="cover-title">
-      <span class="script">Bongkoch</span>
-      <span class="and">and</span>
-      <span class="script">Suphakorn</span>
-    </h2>
-    <p class="datebar" aria-label="13 กุมภาพันธ์ 2027"><span>13</span><i></i><span>02</span><i></i><span>2027</span></p>
-    <p class="cover-to">ขอเรียนเชิญท่านร่วมเป็นเกียรติในวันสำคัญของเรา</p>
-    <button class="btn btn-solid" type="button" id="open-card">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
-      เปิดการ์ดเชิญ
-    </button>
-    <p class="cover-song" id="cover-song"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 17.5V5l11-2v12.5"/><circle cx="6.5" cy="17.5" r="2.8"/><circle cx="17.5" cy="15.5" r="2.8"/><path d="M9 5l11-2v3L9 8Z"/></svg>เพลงรัก – Three Man Down</p>
-  </div>
-</div>
-
-<!-- song file: put the MP3 at music/love-song.mp3 -->
-<audio id="song" src="music/love-song.mp3" loop preload="auto"></audio>
-<button class="music" id="music-btn" type="button" aria-pressed="false" aria-label="เปิด/ปิดเพลง" hidden>
-  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>
-  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg>
-</button>
-<p class="music-tip" id="music-tip" hidden>♪ เพลงรัก – Three Man Down</p>
-
-<!-- ============ HERO ============ -->
-<header class="band hero" id="top">
-  <span class="sprig l" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
-  <div class="wrap">
-    <div class="hero-text">
-      <img class="mono" src="images/monogram.webp" width="380" height="300" alt="โลโก้ B♥S">
-      <p class="kindly">kindly join us<br>for the wedding of</p>
-      <h1 class="names">
-        <span class="script">Bongkoch</span>
-        <span class="and">and</span>
-        <span class="script">Suphakorn</span>
-      </h1>
-      <p class="names-th">บงกช &amp; ศุภกร</p>
-      <p class="datebar" aria-label="13 กุมภาพันธ์ 2027"><span>13</span><i></i><span>02</span><i></i><span>2027</span></p>
-      <a class="scroll" href="#countdown"><i></i><small>SCROLL</small>
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4.5L7 9.5L12 4.5"/></svg>
-      </a>
+<!-- ============ HERO + PLAYER ============ -->
+<header class="hero" id="top">
+  <img src="images/hero-wide.webp" width="1240" height="1000" alt="บงกชและศุภกรจับมือกันเดินบนสนามหญ้า หน้าภูเขา">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <p class="caps">The wedding of</p>
     </div>
-    <div class="arch">
-      <img src="images/hero.webp" width="760" height="894" alt="บงกชและศุภกรจับมือกันเดินบนสนามหญ้า">
+    <div class="hero-bottom">
+      <h1>Bongkoch <span class="amp">&amp;</span> Suphakorn</h1>
+      <p class="married">are getting married</p>
+
+      <div class="player" id="player" aria-label="เครื่องเล่นเพลง">
+        <div class="song-meta"><b>เพลงรัก</b><span>Three Man Down</span></div>
+        <div class="bar" id="bar" role="slider" tabindex="0" aria-label="ตำแหน่งเพลง" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill" id="bar-fill"></span><span class="knob" id="bar-knob"></span>
+        </div>
+        <div class="times"><span id="t-now">0:00</span><span id="t-total">0:00</span></div>
+        <div class="controls">
+          <button class="ctl small" id="btn-repeat" type="button" aria-pressed="true" aria-label="เล่นซ้ำ">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></svg>
+          </button>
+          <button class="ctl" id="btn-back" type="button" aria-label="ย้อนกลับ 10 วินาที">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 6v12L2.5 12Z"/><path d="M20.5 6v12L12 12Z"/></svg>
+          </button>
+          <button class="ctl play" id="btn-play" type="button" aria-pressed="false" aria-label="เล่น / หยุดเพลง">
+            <svg class="play-i"><use href="#i-play"/></svg><svg class="pause-i"><use href="#i-pause"/></svg>
+          </button>
+          <button class="ctl" id="btn-fwd" type="button" aria-label="ข้ามไป 10 วินาที">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 6v12l8.5-6Z"/><path d="M3.5 6v12L12 12Z"/></svg>
+          </button>
+          <button class="ctl small" id="btn-mute" type="button" aria-pressed="true" aria-label="เปิด / ปิดเสียง">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4Z"/><path id="vol-wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+          </button>
+        </div>
+        <p class="hint" id="hint">กด <i><svg><use href="#i-play"/></svg></i> หนึ่งครั้งเพื่อเล่นเพลง และเลื่อนชมการ์ดของเรา</p>
+        <p class="no-song" id="no-song" hidden>เพลงกำลังจะมาเร็ว ๆ นี้ · เลื่อนชมการ์ดของเราได้เลย</p>
+      </div>
     </div>
   </div>
 </header>
+<div class="strip-band">
+  <div class="wrap"><span>B <svg aria-hidden="true"><use href="#heart"/></svg> S Wedding</span><span>13 · 02 · 2027</span></div>
+</div>
+
+<button class="music-fab" id="music-fab" type="button" aria-pressed="false" aria-label="เปิด / ปิดเพลง" hidden>
+  <svg class="on"><use href="#i-note"/></svg>
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg>
+</button>
+
+<!-- ============ WELCOME ============ -->
+<section class="band welcome" id="welcome">
+  <span class="sprig hide-sm" style="left:4%;top:40px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
+  <span class="sprig hide-sm" style="right:4%;top:40px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
+  <div class="wrap center">
+    <p class="caps">Welcome<br>to the wedding of</p>
+    <img class="mono" src="images/monogram.webp" width="380" height="300" alt="โลโก้ B♥S">
+    <p class="datebar" aria-label="13 กุมภาพันธ์ 2027"><span>FEB</span><i></i><span>13</span><i></i><span>2027</span></p>
+    <p class="caps join">Please join us for<br>the happiest day of our life</p>
+  </div>
+</section>
 
 <!-- ============ SAVE THE DATE / COUNTDOWN ============ -->
 <section class="band mist" id="countdown">
   <div class="wrap center">
-    <p class="label">Save the date</p>
+    <p class="caps" style="font-size:.8rem;color:var(--muted)">Save the date</p>
     <h2>นับถอยหลังสู่วันสำคัญ</h2>
     <div class="count" id="count">
       <div><b id="cd-d">–</b><span>วัน</span></div>
@@ -370,10 +435,8 @@ html.locked, html.locked body { overflow: hidden; }
   </div>
 </section>
 
-<!-- ============ INVITATION ============ -->
+<!-- ============ INVITATION + BRIDE & GROOM ============ -->
 <section class="band" id="invite">
-  <span class="sprig hide-sm" style="left:4%;top:56px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
-  <span class="sprig hide-sm" style="right:4%;top:56px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <div class="wrap center">
     <h2>Our Wedding</h2>
     <hr class="rule">
@@ -391,12 +454,20 @@ html.locked, html.locked body { overflow: hidden; }
       </div>
     </div>
     <p class="invite-text">มีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติ<br>เนื่องในพิธีมงคลสมรสระหว่าง</p>
-    <div class="couple-names">
-      <span class="role">the bride</span>
-      <p class="cn">นางสาวบงกช กาติ๊บ <small>(อ้อแอ้)</small></p>
-      <svg class="big-heart beat" aria-hidden="true"><use href="#heart-line"/></svg>
-      <span class="role">the groom</span>
-      <p class="cn">นายศุภกร โสภาพิกุล <small>(น้ำเชี่ยว)</small></p>
+    <div class="pair">
+      <div class="person">
+        <span class="role">the bride</span>
+        <div class="ph"><img src="images/bride.webp" width="360" height="480" alt="เจ้าสาว บงกช"></div>
+        <p class="th">นางสาวบงกช กาติ๊บ<small>(อ้อแอ้)</small></p>
+        <p class="en">BONGKOCH</p>
+      </div>
+      <div class="pair-mid"><span>ระหว่าง</span><svg class="beat" aria-hidden="true"><use href="#heart-line"/></svg></div>
+      <div class="person">
+        <span class="role">the groom</span>
+        <div class="ph"><img src="images/groom.webp" width="360" height="480" alt="เจ้าบ่าว ศุภกร"></div>
+        <p class="th">นายศุภกร โสภาพิกุล<small>(น้ำเชี่ยว)</small></p>
+        <p class="en">SUPHAKORN</p>
+      </div>
     </div>
     <div class="when-card">
       <div class="day"><span>วันเสาร์</span><b>13</b><span>กุมภาพันธ์ 2570</span></div>
@@ -435,43 +506,35 @@ html.locked, html.locked body { overflow: hidden; }
   </div>
 </section>
 
-<!-- ============ VENUE ============ -->
-<section class="band mist venue" id="venue">
-  <span class="sprig" style="left:-10px;bottom:-10px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
-  <div class="wrap">
-    <div class="center">
-      <h2>The Venue</h2>
-      <hr class="rule">
-      <p class="venue-name">Hi Creek Resort &amp; Campsite</p>
-      <p class="venue-th">ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์</p>
-      <p class="venue-addr">อำเภอศรีบุญเรือง จังหวัดหนองบัวลำภู</p>
-      <a class="btn btn-line" target="_blank" rel="noopener"
-         href="https://www.google.com/maps/search/?api=1&amp;query=Hi%20Creek%20Resort%20%26%20Campsite%20Si%20Bun%20Rueang%20Nong%20Bua%20Lam%20Phu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
-        เปิดแผนที่ Google Maps
-      </a>
+<!-- ============ LOCATION ============ -->
+<section class="band mist" id="venue">
+  <div class="wrap center">
+    <div class="venue-head">
+      <svg viewBox="0 0 24 28" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.2 0 11.7 0 20 12 28 12 28s12-8 12-16.3C24 5.2 18.6 0 12 0Zm0 16.5a4.8 4.8 0 1 1 0-9.6 4.8 4.8 0 0 1 0 9.6Z"/></svg>
+      <h2>LOCATION</h2>
     </div>
-    <div class="map" role="img" aria-label="ภาพแผนที่ประกอบ ไฮครีก รีสอร์ท">
-      <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
-        <rect width="320" height="200" fill="#EDF1EA"/>
-        <path d="M0 150Q40 130 80 160T160 190V200H0Z" fill="#C6D8C3"/>
-        <path d="M200 0Q230 30 280 20T320 40V0Z" fill="#C6D8C3"/>
-        <path d="M250 200Q240 160 210 150T170 120Q150 110 120 125" fill="none" stroke="#BCD0D8" stroke-width="12" stroke-linecap="round"/>
-        <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round">
-          <path d="M0 70Q80 60 140 90T320 110"/><path d="M150 0Q140 60 150 100T130 200"/>
-          <path d="M40 0Q60 50 30 120T60 200"/><path d="M210 0Q230 70 270 120T300 200"/>
-          <path d="M150 100Q200 140 320 160" stroke-width="3"/>
-        </g>
-        <path d="M232 60l18-30 18 30Z M256 60l14-22 14 22Z" fill="#A9B8A6"/>
-        <g fill="#8FAE8E"><path d="M60 40l9 20H51Z"/><path d="M74 46l8 18H66Z"/><path d="M290 140l7 16h-14Z"/><path d="M20 170l8 18H12Z"/></g>
-        <path d="M100 150l10-14 10 14Z" fill="#B76A64" opacity=".7"/>
-        <ellipse cx="150" cy="98" rx="18" ry="6" fill="#46574A" opacity=".14"/>
-        <path d="M150 96s-14-14-14-25a14 14 0 0 1 28 0c0 11-14 25-14 25Z" fill="#46574A"/>
-        <circle cx="150" cy="71" r="5" fill="#EDF1EA"/>
-        <rect x="166" y="62" width="74" height="20" rx="10" fill="#FFFFFF"/>
-        <text x="203" y="76" text-anchor="middle" font-family="Anuphan, sans-serif" font-size="10" fill="#4E403B">Hi Creek</text>
-      </svg>
+    <div class="map-frame">
+      <div class="map">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="320" height="200" fill="#EDF1EA"/>
+          <path d="M0 150Q40 130 80 160T160 190V200H0Z" fill="#C6D8C3"/>
+          <path d="M250 200Q240 160 210 150T170 120Q150 110 120 125" fill="none" stroke="#BCD0D8" stroke-width="12" stroke-linecap="round"/>
+          <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"><path d="M0 70Q80 60 140 90T320 110"/><path d="M150 0Q140 60 150 100T130 200"/><path d="M40 0Q60 50 30 120T60 200"/><path d="M210 0Q230 70 270 120T300 200"/></g>
+          <path d="M232 60l18-30 18 30Z M256 60l14-22 14 22Z" fill="#A9B8A6"/>
+          <path d="M150 96s-14-14-14-25a14 14 0 0 1 28 0c0 11-14 25-14 25Z" fill="#46574A"/><circle cx="150" cy="71" r="5" fill="#EDF1EA"/>
+          <rect x="166" y="62" width="74" height="20" rx="10" fill="#FFFFFF"/><text x="203" y="76" text-anchor="middle" font-family="Anuphan, sans-serif" font-size="10" fill="#4E403B">Hi Creek</text>
+        </svg>
+        <iframe data-live-map title="แผนที่ ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Hi%20Creek%20Resort%20%26%20Campsite%20Si%20Bun%20Rueang%20Nong%20Bua%20Lam%20Phu&amp;z=14&amp;output=embed"></iframe>
+      </div>
+      <p class="map-label">Hi Creek Resort &amp; Campsite</p>
     </div>
+    <p class="venue-th">ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์</p>
+    <p class="venue-addr">อำเภอศรีบุญเรือง จังหวัดหนองบัวลำภู</p>
+    <a class="btn btn-solid" target="_blank" rel="noopener"
+       href="https://www.google.com/maps/search/?api=1&amp;query=Hi%20Creek%20Resort%20%26%20Campsite%20Si%20Bun%20Rueang%20Nong%20Bua%20Lam%20Phu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+      นำทางด้วย Google Maps
+    </a>
   </div>
 </section>
 
@@ -490,69 +553,124 @@ html.locked, html.locked body { overflow: hidden; }
       <span class="swatch"><i style="background:#F2E9DA"></i><span>ครีม</span></span>
       <span class="swatch"><i style="background:#B76A64"></i><span>ชมพูอิฐ</span></span>
     </div>
+    <p class="sorry">(ขออภัยหากมิได้มาเรียนเชิญด้วยตนเอง)</p>
   </div>
 </section>
 
-<!-- ============ OUR MOMENTS ============ -->
-<section class="band alt" id="moments">
+<!-- ============ GALLERY ============ -->
+<section class="band gallery-band" id="moments">
   <div class="wrap center">
-    <h2>Our Moments</h2>
-    <hr class="rule">
-    <div class="gallery" id="gallery">
-      <button type="button" data-full="images/card-hand.webp"><img src="images/card-hand-sm.webp" width="440" height="620" alt="จับมือกันเดินบนสนามหญ้า หน้าภูเขา" loading="lazy"></button>
-      <button type="button" data-full="images/card-save.webp"><img src="images/card-save-sm.webp" width="440" height="620" alt="การ์ด Save the date" loading="lazy"></button>
-      <button type="button" data-full="images/card-lift.webp"><img src="images/card-lift-sm.webp" width="440" height="620" alt="เจ้าบ่าวอุ้มเจ้าสาวชูช่อดอกไม้" loading="lazy"></button>
-      <button type="button" data-full="images/card-blur.webp"><img src="images/card-blur-sm.webp" width="440" height="620" alt="Save the date ภาพคู่ใกล้ชิด" loading="lazy"></button>
-      <button type="button" data-full="images/card-veil.webp"><img src="images/card-veil-sm.webp" width="440" height="620" alt="ภาพคู่ใต้ผ้าคลุมเจ้าสาว" loading="lazy"></button>
-      <button type="button" data-full="images/card-illust.webp"><img src="images/card-illust-sm.webp" width="440" height="620" alt="การ์ดภาพวาดสีน้ำคู่บ่าวสาว" loading="lazy"></button>
+    <div class="trio" aria-label="13 02 27">
+      <figure><img src="images/strip-1.webp" width="480" height="632" alt="จับมือกันเดินบนสนามหญ้า" loading="lazy"><b>13</b></figure>
+      <figure><img src="images/strip-2.webp" width="480" height="587" alt="ภาพคู่ใต้ผ้าคลุมเจ้าสาว" loading="lazy"><b>02</b></figure>
+      <figure><img src="images/strip-3.webp" width="480" height="643" alt="เจ้าบ่าวอุ้มเจ้าสาว" loading="lazy"><b>27</b></figure>
     </div>
-    <p class="sub-th">แตะที่ภาพเพื่อดูขนาดใหญ่</p>
+    <p class="welcome-caps">WELCOME TO OUR WEDDING</p>
+    <p class="ever">Happily ever after begins here</p>
+    <p class="tag">OUR MOMENTS</p>
+    <div class="stack">
+      <img src="images/card-hand.webp" width="900" height="1269" alt="Suphakorn and Bongkoch จับมือกันเดินหน้าภูเขา" loading="lazy">
+      <img src="images/card-lift.webp" width="900" height="1269" alt="Bongkoch and Suphakorn เจ้าบ่าวอุ้มเจ้าสาว" loading="lazy">
+      <img src="images/card-veil.webp" width="900" height="1269" alt="ภาพคู่ใต้ผ้าคลุม 13.02.2027 Hi Creek Resort" loading="lazy">
+      <img src="images/card-blur.webp" width="900" height="1269" alt="Save the date 13.02.2027" loading="lazy">
+      <img src="images/card-save.webp" width="900" height="1269" alt="การ์ด Save the date" loading="lazy">
+      <img src="images/card-illust.webp" width="900" height="1269" alt="การ์ดภาพวาดสีน้ำคู่บ่าวสาว" loading="lazy">
+    </div>
   </div>
 </section>
 
-<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ดูภาพขนาดใหญ่">
-  <button class="lb-btn lb-prev" type="button" aria-label="ภาพก่อนหน้า"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12.5 4L6.5 10l6 6"/></svg></button>
-  <img id="lb-img" src="images/card-hand.webp" alt="">
-  <button class="lb-btn lb-next" type="button" aria-label="ภาพถัดไป"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7.5 4l6 6-6 6"/></svg></button>
-  <button class="lb-btn lb-close" type="button" aria-label="ปิด"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
-</div>
-
-<!-- ============ RSVP ============ -->
-<section class="band rsvp" id="rsvp">
-  <div class="wrap">
-    <img class="illust" src="images/couple-illust.webp" width="394" height="806" alt="ภาพวาดสีน้ำ เจ้าบ่าวอุ้มเจ้าสาว">
-    <div class="center">
-      <h2>Be Our Guest</h2>
-      <hr class="rule">
-      <p>ยืนยันการเข้าร่วมงาน</p>
-      <form id="rsvp-form" novalidate>
-        <div class="field">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <input id="guest-name" name="guest" type="text" placeholder="ชื่อ - นามสกุล" autocomplete="name" aria-label="ชื่อ - นามสกุล" required>
-        </div>
-        <div class="field">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.4c3.3-.6 6 1.8 6 5.6"/></svg>
-          <select id="guest-count" name="count" aria-label="จำนวนผู้เข้าร่วม (คน)" required>
-            <option value="" selected disabled>จำนวนผู้เข้าร่วม (คน)</option>
-            <option value="1">1 คน</option><option value="2">2 คน</option><option value="3">3 คน</option>
-            <option value="4">4 คน</option><option value="5">5 คนขึ้นไป</option>
-            <option value="0">ขออภัย ไม่สะดวกมาร่วมงาน</option>
-          </select>
-          <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>
-        </div>
-        <p class="err" id="rsvp-err" hidden></p>
-        <button class="btn btn-solid" type="submit">ยืนยันร่วมงาน</button>
-      </form>
-      <div class="thanks" id="rsvp-thanks" hidden aria-live="polite">
-        <strong>ขอบคุณค่ะ</strong>
-        <p id="rsvp-msg"></p>
+<!-- ============ RSVP + WISHES ============ -->
+<section class="band alt" id="rsvp">
+  <div class="wrap center">
+    <div class="rsvp-head">
+      <img class="illust" src="images/couple-illust.webp" width="394" height="806" alt="">
+      <div>
+        <h2>แบบตอบรับการเข้าร่วมงาน</h2>
+        <p>B ♥ S Wedding · ช่วยตอบให้บ่าวสาวเตรียมงานได้ถูกนะคะ</p>
       </div>
     </div>
+
+    <form class="form" id="rsvp-form" novalidate>
+      <div class="q">
+        <label class="ql" for="f-name">จะให้เรียกคุณว่าอะไร <span class="opt-note">(ชื่อที่บ่าวสาวจำได้)</span></label>
+        <input class="text-in" id="f-name" type="text" maxlength="60" autocomplete="nickname" placeholder="เช่น ต้น เพื่อนสมัยมัธยม">
+      </div>
+
+      <fieldset class="q">
+        <legend>คุณจะมาร่วมงานไหม?</legend>
+        <div class="choices two">
+          <label class="choice"><input type="radio" name="attend" value="yes"><span><em>🥳</em>ไม่พลาดแน่นอน</span></label>
+          <label class="choice"><input type="radio" name="attend" value="no"><span><em>🥺</em>น่าเสียดาย ไปร่วมงานไม่ได้</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>คุณเป็นแขกของฝ่ายไหน?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="side" value="bride"><span>ฝ่ายเจ้าสาว (บงกช)</span></label>
+          <label class="chip"><input type="radio" name="side" value="groom"><span>ฝ่ายเจ้าบ่าว (ศุภกร)</span></label>
+          <label class="chip"><input type="radio" name="side" value="both"><span>รู้จักทั้งคู่</span></label>
+        </div>
+      </fieldset>
+
+      <div id="attend-only" class="attend-only" hidden>
+        <fieldset class="q">
+          <legend>คุณพาหวานใจมาร่วมงานด้วยหรือไม่?</legend>
+          <div class="choices three">
+            <label class="choice"><input type="radio" name="party" value="solo"><span><em>🙋</em>คนเดียว เหงา ๆ</span></label>
+            <label class="choice"><input type="radio" name="party" value="partner"><span><em>💑</em>มากับหวานใจ</span></label>
+            <label class="choice"><input type="radio" name="party" value="family"><span><em>👨‍👩‍👧</em>มากับครอบครัว / ก๊วนเพื่อน</span></label>
+          </div>
+        </fieldset>
+        <div class="q">
+          <span class="ql" id="count-label" style="font-weight:600">จำนวนผู้มาร่วมงาน (รวมตัวคุณ)</span>
+          <div class="stepper" role="group" aria-labelledby="count-label">
+            <button type="button" id="c-minus" aria-label="ลดจำนวน">−</button>
+            <output id="c-out" aria-live="polite">1 คน</output>
+            <button type="button" id="c-plus" aria-label="เพิ่มจำนวน">+</button>
+          </div>
+        </div>
+        <fieldset class="q">
+          <legend>อาหารที่ทานไม่ได้ / แพ้ <span class="opt-note">(เลือกได้หลายข้อ)</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="diet" value="ไม่ทานเนื้อวัว"><span>ไม่ทานเนื้อวัว</span></label>
+            <label class="chip"><input type="checkbox" name="diet" value="ไม่ทานหมู"><span>ไม่ทานหมู</span></label>
+            <label class="chip"><input type="checkbox" name="diet" value="มังสวิรัติ / เจ"><span>มังสวิรัติ / เจ</span></label>
+            <label class="chip"><input type="checkbox" name="diet" value="แพ้อาหารทะเล"><span>แพ้อาหารทะเล</span></label>
+            <label class="chip"><input type="checkbox" name="diet" value="ฮาลาล"><span>ฮาลาล</span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="q">
+        <label class="ql" for="f-wish">ฝากคำอวยพรถึงบ่าวสาว <span class="opt-note">(จะแสดงบนหน้าการ์ด)</span></label>
+        <textarea class="text-area" id="f-wish" maxlength="300" placeholder="ขอให้รักกันมาก ๆ นะ..."></textarea>
+        <p class="counter"><span id="wish-n">0</span>/300</p>
+      </div>
+
+      <p class="err" id="rsvp-err" role="alert" hidden></p>
+      <button class="btn btn-solid" type="submit" id="rsvp-submit">ยืนยันข้อมูล</button>
+    </form>
+
+    <div class="thanks" id="rsvp-thanks" hidden aria-live="polite">
+      <strong>ขอบคุณค่ะ ♥</strong>
+      <p id="rsvp-msg"></p>
+      <button type="button" id="rsvp-again">แก้ไขคำตอบ / ส่งอีกครั้ง</button>
+    </div>
+    <p class="store-note" id="store-note" hidden></p>
+
+    <div class="wishes-head">
+      <h2 style="font-size:clamp(1.8rem,4.4vw,2.3rem)">Wishes</h2>
+      <p class="sub-th">คำอวยพรจากแขกที่รัก</p>
+      <div class="stats" id="stats" hidden><span>ตอบรับแล้ว <b id="s-yes">0</b> ท่าน</span><span>คำอวยพร <b id="s-wish">0</b> ข้อความ</span></div>
+    </div>
+    <div class="wishes" id="wishes"></div>
+    <p class="wishes-empty" id="wishes-empty">ยังไม่มีคำอวยพร มาเป็นคนแรกที่ส่งความรักถึงบ่าวสาวกันนะ ♥</p>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="band mist">
+<footer class="band mist site">
   <span class="sprig" style="left:-14px;bottom:-14px;width:130px;height:130px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <span class="sprig" style="right:-14px;bottom:-14px;width:130px;height:130px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <div class="wrap center">
@@ -563,109 +681,221 @@ html.locked, html.locked body { overflow: hidden; }
 </footer>
 
 <script>
-(function () {
+/* ใส่ URL ของ Google Apps Script (Web app) ที่นี่ เพื่อเก็บคำตอบลง Google Sheet และแสดงคำอวยพรของทุกคน
+   วิธีตั้งค่าดูที่ rsvp/README.md */
+var RSVP_ENDPOINT = '';
 
-  /* cover + background song: browsers only allow sound after a tap, so the "open" tap starts it */
-  var song = document.getElementById('song');
-  var musicBtn = document.getElementById('music-btn');
-  var tip = document.getElementById('music-tip');
-  var songOk = true;
-  function setPlaying(on) { musicBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); }
-  function play() {
-    if (!songOk) return;
-    song.volume = 0;
-    var p = song.play();
-    if (p && p.then) p.then(function () {
-      setPlaying(true);
-      var v = 0, fade = setInterval(function () { v = Math.min(0.8, v + 0.05); song.volume = v; if (v >= 0.8) clearInterval(fade); }, 120);
-    }).catch(function (e) { setPlaying(false); if (song.error || (e && e.name === 'NotSupportedError')) noSong(); });
-  }
+(function () {
+  function $(id) { return document.getElementById(id); }
+
+  /* ---------------- music player ---------------- */
+  var song = $('song'), btnPlay = $('btn-play'), fab = $('music-fab');
+  var songOk = true, started = false;
+  song.loop = true;
+  function fmt(t) { if (!isFinite(t)) return '0:00'; t = Math.floor(t); return Math.floor(t / 60) + ':' + ('0' + t % 60).slice(-2); }
+  function setPlaying(on) { btnPlay.setAttribute('aria-pressed', on); fab.setAttribute('aria-pressed', on); }
   function noSong() {
-    songOk = false; musicBtn.hidden = true; tip.hidden = true;
-    document.getElementById('cover-song').hidden = true;
+    songOk = false; fab.hidden = true;
+    $('hint').hidden = true; $('no-song').hidden = false;
+    ['btn-play', 'btn-back', 'btn-fwd', 'btn-repeat', 'btn-mute'].forEach(function (id) { $(id).disabled = true; });
   }
   if (song.error) noSong();
   song.addEventListener('error', noSong);
-  song.addEventListener('pause', function () { setPlaying(false); });
+  function play() {
+    if (!songOk) return;
+    var first = !started;
+    if (first) song.volume = 0;
+    var p = song.play();
+    if (p && p.then) p.then(function () {
+      started = true; fab.hidden = false;
+      if (first) { var v = 0, f = setInterval(function () { v = Math.min(0.85, v + 0.05); song.volume = v; if (v >= 0.85) clearInterval(f); }, 120); }
+    }).catch(function (e) { setPlaying(false); if (song.error || (e && e.name === 'NotSupportedError')) noSong(); });
+  }
+  function toggle() { if (song.paused) play(); else song.pause(); }
+  btnPlay.addEventListener('click', toggle);
+  fab.addEventListener('click', toggle);
   song.addEventListener('play', function () { setPlaying(true); });
-  musicBtn.addEventListener('click', function () { if (song.paused) play(); else song.pause(); });
-  document.getElementById('open-card').addEventListener('click', function () {
-    play();
-    document.getElementById('cover').classList.add('gone');
-    document.documentElement.classList.remove('locked');
-    if (songOk) {
-      musicBtn.hidden = false; tip.hidden = false;
-      setTimeout(function () { tip.classList.add('fade'); }, 4000);
-      setTimeout(function () { tip.hidden = true; }, 4700);
-    }
+  song.addEventListener('pause', function () { setPlaying(false); });
+  $('btn-back').addEventListener('click', function () { song.currentTime = Math.max(0, song.currentTime - 10); });
+  $('btn-fwd').addEventListener('click', function () { if (song.duration) song.currentTime = Math.min(song.duration - 1, song.currentTime + 10); });
+  $('btn-repeat').addEventListener('click', function () { song.loop = !song.loop; this.setAttribute('aria-pressed', song.loop); });
+  $('btn-mute').addEventListener('click', function () {
+    song.muted = !song.muted; this.setAttribute('aria-pressed', !song.muted);
+    $('vol-wave').style.display = song.muted ? 'none' : '';
+  });
+  var bar = $('bar'), fill = $('bar-fill'), knob = $('bar-knob');
+  function paint() {
+    var pct = song.duration ? song.currentTime / song.duration * 100 : 0;
+    fill.style.width = pct + '%'; knob.style.left = pct + '%';
+    bar.setAttribute('aria-valuenow', Math.round(pct));
+    $('t-now').textContent = fmt(song.currentTime); $('t-total').textContent = fmt(song.duration);
+  }
+  song.addEventListener('timeupdate', paint);
+  song.addEventListener('loadedmetadata', paint);
+  function seekTo(clientX) {
+    if (!song.duration) return;
+    var r = bar.getBoundingClientRect();
+    song.currentTime = Math.min(Math.max((clientX - r.left) / r.width, 0), 1) * song.duration;
+  }
+  var dragging = false;
+  bar.addEventListener('pointerdown', function (e) { dragging = true; bar.setPointerCapture(e.pointerId); seekTo(e.clientX); });
+  bar.addEventListener('pointermove', function (e) { if (dragging) seekTo(e.clientX); });
+  bar.addEventListener('pointerup', function () { dragging = false; });
+  bar.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { song.currentTime += 5; e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { song.currentTime = Math.max(0, song.currentTime - 5); e.preventDefault(); }
   });
 
-  /* countdown to 13 Feb 2027, 09:09 Thailand time */
+  /* ---------------- countdown ---------------- */
   var target = Date.parse('2027-02-13T09:09:00+07:00');
-  var els = ['d', 'h', 'm', 's'].map(function (k) { return document.getElementById('cd-' + k); });
+  var cd = ['d', 'h', 'm', 's'].map(function (k) { return $('cd-' + k); });
   function pad(n) { return n < 10 ? '0' + n : String(n); }
-  function tick() {
+  (function tick() {
     var diff = Math.max(0, target - Date.now());
-    if (diff === 0) {
-      document.getElementById('count').hidden = true;
-      document.getElementById('count-done').hidden = false;
-      return;
-    }
+    if (diff === 0) { $('count').hidden = true; $('count-done').hidden = false; return; }
     var s = Math.floor(diff / 1000);
-    els[0].textContent = Math.floor(s / 86400);
-    els[1].textContent = pad(Math.floor(s % 86400 / 3600));
-    els[2].textContent = pad(Math.floor(s % 3600 / 60));
-    els[3].textContent = pad(s % 60);
+    cd[0].textContent = Math.floor(s / 86400); cd[1].textContent = pad(Math.floor(s % 86400 / 3600));
+    cd[2].textContent = pad(Math.floor(s % 3600 / 60)); cd[3].textContent = pad(s % 60);
     setTimeout(tick, 1000 - (Date.now() % 1000));
-  }
-  tick();
+  })();
 
-  /* gallery lightbox */
-  var buttons = Array.prototype.slice.call(document.querySelectorAll('#gallery button'));
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lb-img');
-  var current = 0, opener = null;
-  function show(i) {
-    current = (i + buttons.length) % buttons.length;
-    var b = buttons[current];
-    lbImg.src = b.getAttribute('data-full');
-    lbImg.alt = b.querySelector('img').alt;
+  /* ---------------- RSVP form ---------------- */
+  var form = $('rsvp-form'), err = $('rsvp-err'), count = 1;
+  function radio(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
+  function setCount(n) {
+    count = Math.min(10, Math.max(1, n));
+    $('c-out').textContent = count + (count === 10 ? '+ คน' : ' คน');
+    $('c-minus').disabled = count === 1; $('c-plus').disabled = count === 10;
   }
-  function close() { lb.hidden = true; document.body.style.overflow = ''; if (opener) opener.focus(); }
-  buttons.forEach(function (b, i) {
-    b.addEventListener('click', function () {
-      opener = b; show(i); lb.hidden = false; document.body.style.overflow = 'hidden';
-      lb.querySelector('.lb-close').focus();
+  setCount(1);
+  $('c-minus').addEventListener('click', function () { setCount(count - 1); });
+  $('c-plus').addEventListener('click', function () { setCount(count + 1); });
+  form.addEventListener('change', function (e) {
+    if (e.target.name === 'attend') $('attend-only').hidden = e.target.value !== 'yes';
+    if (e.target.name === 'party') setCount(e.target.value === 'solo' ? 1 : e.target.value === 'partner' ? 2 : Math.max(count, 3));
+  });
+  $('f-wish').addEventListener('input', function () { $('wish-n').textContent = this.value.length; });
+
+  /* ---------------- storage: Google Sheet → artifact db → this browser ---------------- */
+  var SIDE = { bride: 'ฝ่ายเจ้าสาว', groom: 'ฝ่ายเจ้าบ่าว', both: 'รู้จักทั้งคู่' };
+  var store = null, rows = [];
+  function localStore() {
+    function read() { try { return JSON.parse(localStorage.getItem('bs-rsvp') || '[]'); } catch (e) { return []; } }
+    return {
+      kind: 'local',
+      load: function (cb) { cb(read()); },
+      add: function (entry) {
+        var list = read(); list.push(entry);
+        try { localStorage.setItem('bs-rsvp', JSON.stringify(list)); } catch (e) {}
+        return Promise.resolve(list);
+      }
+    };
+  }
+  function sheetStore() {
+    return {
+      kind: 'sheet',
+      load: function (cb) {
+        fetch(RSVP_ENDPOINT).then(function (r) { return r.json(); }).then(function (d) { cb(d.rows || []); }).catch(function () { cb(rows); });
+      },
+      add: function (entry) {
+        return fetch(RSVP_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(entry) })
+          .then(function (r) { if (!r.ok) throw new Error('send'); });
+      }
+    };
+  }
+  function dbStore(db, user) {
+    return {
+      kind: 'db',
+      load: function (cb) {
+        db.collection('rsvp').onSnapshot(function (snap) {
+          cb(snap.docs.map(function (d) { return d.data() || {}; }));
+        }, function () { cb(rows); });
+      },
+      add: function (entry) {
+        return user.id().then(function (id) {
+          if (!id) throw new Error('signed-out');
+          return db.collection('rsvp').doc(id).set(entry);
+        });
+      }
+    };
+  }
+
+  function timeAgo(t) {
+    var s = (Date.now() - t) / 1000;
+    if (!(s >= 0)) return '';
+    if (s < 60) return 'เมื่อสักครู่';
+    if (s < 3600) return Math.floor(s / 60) + ' นาทีที่แล้ว';
+    if (s < 86400) return Math.floor(s / 3600) + ' ชั่วโมงที่แล้ว';
+    return new Date(t).toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: '2-digit' });
+  }
+  function render(list) {
+    rows = list || [];
+    var box = $('wishes'); box.textContent = '';
+    var withWish = rows.filter(function (r) { return r && r.wish; })
+      .sort(function (a, b) { return (b.time || 0) - (a.time || 0); });
+    withWish.forEach(function (r) {
+      var card = document.createElement('article'); card.className = 'wish';
+      var p = document.createElement('p'); p.textContent = r.wish;
+      var f = document.createElement('footer');
+      var who = document.createElement('span');
+      var b = document.createElement('b'); b.textContent = r.name || 'แขกผู้ใจดี'; who.appendChild(b);
+      if (SIDE[r.side]) { var st = document.createElement('span'); st.className = 'side-tag'; st.textContent = ' · ' + SIDE[r.side]; who.appendChild(st); }
+      var when = document.createElement('span'); when.textContent = timeAgo(r.time);
+      f.appendChild(who); f.appendChild(when);
+      card.appendChild(p); card.appendChild(f); box.appendChild(card);
     });
-  });
-  lb.querySelector('.lb-prev').addEventListener('click', function () { show(current - 1); });
-  lb.querySelector('.lb-next').addEventListener('click', function () { show(current + 1); });
-  lb.querySelector('.lb-close').addEventListener('click', close);
-  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
-  document.addEventListener('keydown', function (e) {
-    if (lb.hidden) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show(current - 1);
-    if (e.key === 'ArrowRight') show(current + 1);
-  });
+    $('wishes-empty').hidden = withWish.length > 0;
+    var guests = rows.reduce(function (n, r) { return n + (r && r.attend === 'yes' ? (Number(r.guests) || 1) : 0); }, 0);
+    $('s-yes').textContent = guests; $('s-wish').textContent = withWish.length;
+    $('stats').hidden = rows.length === 0;
+  }
 
-  /* RSVP: no backend yet, shows a confirmation only */
-  var form = document.getElementById('rsvp-form');
-  var err = document.getElementById('rsvp-err');
+  function useStore(s) {
+    store = s;
+    var note = $('store-note');
+    if (s.kind === 'local') { note.hidden = false; note.textContent = 'ตอนนี้คำตอบและคำอวยพรจะบันทึกไว้ในเครื่องของคุณเท่านั้น'; }
+    else { note.hidden = true; }
+    s.load(render);
+  }
+  if (RSVP_ENDPOINT) useStore(sheetStore());
+  else {
+    useStore(localStore());
+    if (window.claude && typeof window.claude.use === 'function') {
+      Promise.all([window.claude.use('db'), window.claude.use('user')]).then(function (r) {
+        if (r[0] && r[1]) useStore(dbStore(r[0], r[1]));
+      }).catch(function () {});
+    }
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var nameEl = document.getElementById('guest-name');
-    var countEl = document.getElementById('guest-count');
-    var name = nameEl.value.trim(), count = countEl.value;
-    if (!name) { err.textContent = 'กรุณากรอกชื่อ - นามสกุล'; err.hidden = false; nameEl.focus(); return; }
-    if (count === '') { err.textContent = 'กรุณาเลือกจำนวนผู้เข้าร่วม'; err.hidden = false; countEl.focus(); return; }
+    var name = $('f-name').value.trim(), attend = radio('attend'), side = radio('side');
+    var problem = !name ? ['กรุณาบอกชื่อที่บ่าวสาวจำได้', $('f-name')]
+      : !attend ? ['กรุณาเลือกว่าจะมาร่วมงานหรือไม่', form.querySelector('input[name="attend"]')]
+      : !side ? ['กรุณาเลือกว่าเป็นแขกของฝ่ายไหน', form.querySelector('input[name="side"]')] : null;
+    if (problem) { err.textContent = problem[0]; err.hidden = false; problem[1].focus(); return; }
     err.hidden = true;
-    document.getElementById('rsvp-msg').textContent = count === '0'
-      ? 'คุณ' + name + ' ไม่สะดวกมาร่วมงาน ขอบคุณที่แจ้งให้ทราบนะคะ'
-      : 'คุณ' + name + ' ยืนยันร่วมงาน ' + (count === '5' ? '5 คนขึ้นไป' : count + ' คน') + ' แล้วพบกันวันเสาร์ที่ 13 กุมภาพันธ์ 2570 ค่ะ';
-    form.hidden = true;
-    document.getElementById('rsvp-thanks').hidden = false;
+    var entry = {
+      name: name, attend: attend, side: side,
+      party: attend === 'yes' ? radio('party') : '',
+      guests: attend === 'yes' ? count : 0,
+      diet: attend === 'yes' ? Array.prototype.map.call(form.querySelectorAll('input[name="diet"]:checked'), function (c) { return c.value; }).join(', ') : '',
+      wish: $('f-wish').value.trim().slice(0, 300),
+      time: Date.now()
+    };
+    var btn = $('rsvp-submit'); btn.disabled = true; btn.textContent = 'กำลังส่ง...';
+    store.add(entry).then(function (list) {
+      if (store.kind === 'local') render(list);
+      else if (store.kind === 'sheet') { render(rows.concat([entry])); store.load(render); }
+      $('rsvp-msg').textContent = attend === 'yes'
+        ? 'คุณ' + name + ' ยืนยันมาร่วมงาน ' + count + ' ท่าน แล้วพบกันวันเสาร์ที่ 13 กุมภาพันธ์ 2570 นะคะ'
+        : 'เสียดายจัง ขอบคุณคุณ' + name + ' ที่แจ้งให้ทราบ และขอบคุณสำหรับความรักที่ส่งมานะคะ';
+      form.hidden = true; $('rsvp-thanks').hidden = false;
+    }).catch(function () {
+      err.textContent = 'ส่งข้อมูลไม่สำเร็จ กรุณาตรวจสอบอินเทอร์เน็ตแล้วกด "ยืนยันข้อมูล" อีกครั้ง'; err.hidden = false;
+    }).then(function () { btn.disabled = false; btn.textContent = 'ยืนยันข้อมูล'; });
   });
+  $('rsvp-again').addEventListener('click', function () { $('rsvp-thanks').hidden = true; form.hidden = false; $('f-name').focus(); });
 })();
 </script>
 </body>
