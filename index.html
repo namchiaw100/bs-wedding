@@ -3,212 +3,247 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Suphakorn &amp; Bongkoch</title>
+<title>Bongkoch &amp; Suphakorn</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="การ์ดเชิญงานแต่งงาน สุภากร &amp; บงกช 13 กุมภาพันธ์ 2570">
+<meta name="description" content="การ์ดเชิญงานมงคลสมรส บงกช &amp; ศุภกร วันเสาร์ที่ 13 กุมภาพันธ์ 2570 ณ ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์ จ.หนองบัวลำภู">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+Thai:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Anuphan:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap">
 <style>
-/* Layout: แถบเต็มความกว้างสลับครีม/เขียวเสจ เนื้อหาตรงกลาง ใบไม้ลายเส้นประดับขอบ */
+/* Layout: แถบเต็มความกว้างสลับครีม / เขียวหมอก ตามธีมสีของการ์ด เนื้อหาตรงกลาง ใบไม้ลายเส้นประดับขอบ */
 :root {
-  --paper: #F8F5EE;
-  --paper-2: #F2EEE4;
-  --sage: #CBD8C3;
-  --sage-mid: #A6BB9D;
-  --leaf: #7E957A;
-  --forest: #24402F;
-  --ink: #2A372E;
-  --muted: #66736A;
-  --cream: #E8DDC8;
+  --paper: #F8F6F1;
+  --paper-2: #F2EEE5;
+  --mist: #D7DED6;
+  --sage: #A6C3A5;
+  --moss: #687665;
+  --forest: #46574A;
+  --cream: #F2E9DA;
+  --rose: #B76A64;
+  --ink: #4E403B;
+  --muted: #7A6E68;
+  --line: #CDD3C9;
   --white: #FFFFFF;
-  --heart: #C8463D;
-  --line: #C9CFC2;
   --display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
-  --body: "Noto Sans Thai", "Sarabun", "Leelawadee UI", system-ui, sans-serif;
+  --script: "Mrs Saint Delafield", "Brush Script MT", cursive;
+  --body: "Anuphan", "Noto Sans Thai", "Leelawadee UI", system-ui, sans-serif;
   color-scheme: light;
 }
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--body);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-weight: 400; font-size: 16px; line-height: 1.75;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
 }
 img, svg { max-width: 100%; }
+img { display: block; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+p { margin: 0; }
 
 .band { position: relative; overflow: hidden; }
-.band.sage { background: var(--sage); }
+.band.mist { background: var(--mist); }
 .band.alt { background: var(--paper-2); }
 .wrap {
-  position: relative; z-index: 1;
-  max-width: 980px; margin: 0 auto;
-  padding-block: 56px;
+  position: relative; z-index: 1; max-width: 1000px; margin: 0 auto;
+  padding-block: 64px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 .center { text-align: center; display: grid; justify-items: center; gap: 14px; }
 
-h1, h2 { font-family: var(--display); font-weight: 500; color: var(--forest); margin: 0; line-height: 1.05; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; color: var(--forest); margin: 0; line-height: 1.05; text-wrap: balance; }
 h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
-.rule { width: 44px; height: 1px; background: var(--forest); opacity: .55; border: 0; margin: 2px 0; }
-.label { font-family: var(--display); font-weight: 600; letter-spacing: .32em; text-transform: uppercase; font-size: .8rem; color: var(--muted); }
-p { margin: 0; }
+.sub-th { color: var(--muted); font-size: .95rem; }
+.rule { width: 44px; height: 1px; background: var(--forest); opacity: .5; border: 0; margin: 2px 0; }
+.label { font-family: var(--display); font-weight: 600; letter-spacing: .3em; text-transform: uppercase; font-size: .8rem; color: var(--muted); }
+.script { font-family: var(--script); font-weight: 400; color: var(--ink); line-height: .9; }
 
-/* decorative sprigs */
-.sprig { position: absolute; width: 120px; height: 120px; color: var(--leaf); pointer-events: none; z-index: 0; opacity: .9; }
+.sprig { position: absolute; width: 120px; height: 120px; color: var(--moss); pointer-events: none; z-index: 0; opacity: .75; }
 .sprig svg { width: 100%; height: 100%; display: block; }
 
-/* buttons */
 .btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  font: inherit; font-weight: 500; font-size: 1rem;
-  padding: 11px 30px; border-radius: 999px; cursor: pointer;
-  text-decoration: none; transition: transform .2s ease, background .2s ease;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font: inherit; font-weight: 500; font-size: 1rem; padding: 11px 28px; border-radius: 999px;
+  cursor: pointer; text-decoration: none; transition: transform .2s ease, background .2s ease;
 }
 .btn svg { width: 18px; height: 18px; flex: none; }
 .btn-solid { background: var(--forest); color: var(--paper); border: 1px solid var(--forest); }
-.btn-solid:hover { background: #1A3123; transform: translateY(-1px); }
+.btn-solid:hover { background: #38473B; transform: translateY(-1px); }
 .btn-line { background: transparent; color: var(--forest); border: 1px solid var(--forest); }
-.btn-line:hover { background: rgba(36,64,47,.06); transform: translateY(-1px); }
+.btn-line:hover { background: rgba(70,87,74,.07); transform: translateY(-1px); }
+
+.heart-rule { display: flex; align-items: center; gap: 10px; }
+.heart-rule i { width: 28px; height: 1px; background: var(--ink); opacity: .4; }
+.heart-rule svg { width: 14px; height: 14px; color: var(--rose); }
 
 /* ---------- Hero ---------- */
-.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; padding-block: 28px 0; }
-.hero-text { display: grid; justify-items: center; text-align: center; gap: 12px; padding-block: 24px 40px; }
-.mono { position: relative; width: 104px; height: 110px; font-family: var(--display); color: var(--forest); }
-.mono .s, .mono .b { position: absolute; font-size: 64px; line-height: 1; font-weight: 500; }
-.mono .s { left: 10px; top: 0; }
-.mono .b { left: 34px; top: 40px; }
-.mono .h { position: absolute; left: 30px; top: 42px; width: 16px; height: 16px; color: var(--heart); }
-.mono .tw { position: absolute; right: -26px; top: -6px; width: 64px; height: 64px; color: var(--leaf); }
-.hero h1 { font-size: clamp(2.4rem, 5.6vw, 3.7rem); }
-.hero h1 .amp { color: var(--sage-mid); font-style: italic; padding-right: .12em; }
-.hero h1 > span { display: block; white-space: nowrap; }
-.date-line { font-family: var(--display); font-weight: 600; letter-spacing: .38em; font-size: .9rem; color: var(--ink); }
-.scroll { display: grid; justify-items: center; gap: 6px; margin-top: 8px; text-decoration: none; color: var(--muted); }
-.scroll i { width: 1px; height: 34px; background: var(--muted); opacity: .6; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; align-items: center; padding-block: 32px 0; }
+.hero-text { display: grid; justify-items: center; text-align: center; gap: 10px; padding-block: 16px 44px; }
+.mono { width: 168px; height: auto; }
+.kindly { font-family: var(--display); font-style: italic; font-size: 1.15rem; letter-spacing: .14em; color: var(--muted); line-height: 1.4; }
+.names { display: grid; justify-items: center; margin: 4px 0 2px; }
+.names .script { font-size: clamp(4rem, 9.5vw, 6.2rem); }
+.names .and { font-family: var(--script); font-size: 2.2rem; color: var(--rose); line-height: .8; margin: -4px 0 -2px; }
+.names-th { font-size: .98rem; color: var(--muted); }
+.datebar { display: flex; align-items: center; gap: 16px; font-family: var(--display); font-size: 1.9rem; letter-spacing: .12em; color: var(--ink); font-variant-numeric: lining-nums tabular-nums; margin-top: 6px; }
+.datebar i { width: 1px; height: 36px; background: var(--sage); }
+.scroll { display: grid; justify-items: center; gap: 6px; margin-top: 10px; text-decoration: none; color: var(--muted); }
+.scroll i { width: 1px; height: 30px; background: var(--muted); opacity: .5; }
 .scroll small { font-family: var(--display); letter-spacing: .3em; font-size: .7rem; font-weight: 600; }
 .scroll svg { width: 14px; height: 14px; animation: bob 2.2s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(4px); } }
+.arch { border-radius: 999px 999px 0 0; overflow: hidden; aspect-ratio: 4 / 5; width: 100%; max-width: 100%; background: var(--mist); }
+.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.hero .arch { align-self: end; }
+.hero .sprig.l { left: -26px; bottom: -6px; width: 150px; height: 150px; transform: scaleX(-1) rotate(-10deg); }
 
-.arch {
-  border-radius: 999px 999px 0 0; overflow: hidden; aspect-ratio: 3 / 4; width: 100%; max-width: 100%;
-  background: var(--sage); box-shadow: 0 0 0 6px var(--paper), 0 0 0 7px var(--line);
-}
-.arch svg, .frame svg { display: block; width: 100%; height: 100%; }
-.hero .arch { align-self: end; box-shadow: none; }
-.hero .sprig.l { left: -28px; bottom: -6px; width: 150px; height: 150px; transform: scaleX(-1) rotate(-10deg); }
+/* ---------- Countdown ---------- */
+.count { display: grid; grid-template-columns: repeat(4, minmax(0, 92px)); gap: 12px; justify-content: center; margin-top: 4px; }
+.count div { background: var(--paper); border-radius: 12px; padding: 12px 6px 8px; display: grid; gap: 2px; }
+.count b { font-family: var(--display); font-weight: 500; font-size: 2.3rem; line-height: 1; color: var(--forest); font-variant-numeric: lining-nums tabular-nums; }
+.count span { font-size: .82rem; color: var(--muted); }
+.count-done { font-family: var(--display); font-size: 1.5rem; color: var(--forest); }
 
-/* ---------- Our Wedding ---------- */
-.invite-th { font-size: 1.05rem; }
-.when { font-size: 1.15rem; font-weight: 500; line-height: 1.6; }
-.title-row { display: flex; align-items: center; gap: 14px; }
-.title-row .mini { width: 34px; height: 34px; color: var(--leaf); }
-.title-row .mini.r { transform: scaleX(-1); }
+/* ---------- Invitation ---------- */
+.families { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px 28px; align-items: center; width: 100%; max-width: 760px; margin-top: 6px; }
+.fam { display: grid; gap: 2px; min-width: 0; }
+.fam .side { font-weight: 500; letter-spacing: .06em; font-size: .82rem; color: var(--moss); margin-bottom: 6px; }
+.fam p { font-size: 1.06rem; }
+.fam p span { color: var(--muted); font-size: .92rem; }
+.fam.bride { text-align: right; }
+.fam.groom { text-align: left; }
+.fam-and { font-size: 1.1rem; color: var(--muted); }
+.invite-text { max-width: 34em; font-size: 1.04rem; margin-top: 10px; }
+.couple-names { display: grid; justify-items: center; gap: 2px; margin-top: 6px; }
+.couple-names .cn { font-size: clamp(1.35rem, 3.6vw, 1.75rem); font-weight: 500; color: var(--ink); line-height: 1.4; }
+.couple-names .cn small { font-weight: 400; color: var(--muted); font-size: .8em; }
+.couple-names .role { font-family: var(--display); font-style: italic; color: var(--moss); font-size: 1rem; letter-spacing: .08em; }
+.couple-names svg.big-heart { width: 46px; height: 42px; color: var(--rose); margin: 8px 0; }
+.when-card { margin-top: 18px; display: grid; grid-template-columns: auto 1px auto; gap: 22px; align-items: center; text-align: left; }
+.when-card .day { display: grid; justify-items: center; line-height: 1.1; color: var(--ink); }
+.when-card .day b { font-family: var(--display); font-weight: 500; font-size: 3.6rem; line-height: 1; font-variant-numeric: lining-nums; }
+.when-card .day span { font-size: 1rem; }
+.when-card i { align-self: stretch; background: var(--ink); opacity: .35; }
+.when-card .place { display: grid; gap: 2px; }
+.when-card .place strong { font-weight: 500; font-size: 1.08rem; }
+.when-card .place span { color: var(--muted); font-size: .95rem; }
 
 /* ---------- Timeline ---------- */
-.timeline { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 18px; position: relative; text-align: left; justify-self: center; }
-.timeline::before { content: ""; position: absolute; left: -36px; top: 26px; bottom: 26px; width: 1px; background: var(--ink); opacity: .5; }
-.timeline li { display: grid; grid-template-columns: 56px 1fr; gap: 22px; align-items: center; position: relative; min-width: 0; }
-.timeline li::before { content: ""; position: absolute; left: -39px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: var(--ink); }
-.ico { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); display: grid; place-items: center; color: var(--forest); }
-.ico svg { width: 32px; height: 32px; }
-.tl-time { display: block; font-weight: 500; font-variant-numeric: tabular-nums; }
-.tl-what { display: block; font-size: 1.05rem; }
-.tl-tbc { display: block; font-size: .82rem; color: var(--muted); }
+.timeline { list-style: none; margin: 18px 0 0; padding: 0; width: 100%; max-width: 820px; display: grid; grid-template-columns: repeat(3, 1fr); position: relative; }
+.timeline::before { content: ""; position: absolute; left: 6%; right: 6%; top: 128px; height: 1px; background: var(--ink); opacity: .5; }
+.timeline li { display: grid; justify-items: center; text-align: center; position: relative; min-width: 0; padding-inline: 6px; }
+.timeline .pic { height: 112px; display: grid; place-items: end center; }
+.timeline .pic img { max-height: 104px; width: auto; }
+.timeline .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--ink); border: 4px solid var(--paper-2); margin: 8px 0 12px; position: relative; z-index: 1; }
+.tl-time { font-weight: 500; font-size: 1.08rem; color: var(--forest); font-variant-numeric: tabular-nums; }
+.tl-what { font-size: 1.04rem; }
 
 /* ---------- Venue ---------- */
-.venue .wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: 32px; align-items: center; }
-.map { border-radius: 14px; overflow: hidden; border: 3px solid rgba(255,255,255,.75); box-shadow: 0 6px 24px rgba(36,64,47,.12); aspect-ratio: 16 / 10; max-width: 100%; }
+.venue .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: center; }
+.venue-name { font-family: var(--display); font-size: 1.6rem; font-weight: 500; color: var(--ink); line-height: 1.2; }
+.venue-th { font-size: 1.04rem; }
+.venue-addr { color: var(--muted); font-size: .95rem; }
+.map { border-radius: 14px; overflow: hidden; border: 3px solid rgba(255,255,255,.8); box-shadow: 0 6px 24px rgba(70,87,74,.14); aspect-ratio: 16 / 10; max-width: 100%; }
 .map svg { display: block; width: 100%; height: 100%; }
 
-/* ---------- Dress code ---------- */
-.swatches { display: flex; gap: 18px; justify-content: center; margin-top: 8px; }
-.swatch { width: 62px; height: 62px; border-radius: 50%; border: 1px solid rgba(42,55,46,.25); }
-.heart-rule { display: flex; align-items: center; gap: 10px; }
-.heart-rule i { width: 26px; height: 1px; background: var(--ink); opacity: .5; }
-.heart-rule svg { width: 14px; height: 14px; color: var(--heart); }
+/* ---------- Color theme ---------- */
+.swatches { display: flex; flex-wrap: wrap; gap: 18px 16px; justify-content: center; margin-top: 8px; }
+.swatch { display: grid; justify-items: center; gap: 8px; width: 78px; }
+.swatch i { width: 64px; height: 64px; border-radius: 50%; border: 1px solid rgba(78,64,59,.18); }
+.swatch span { font-size: .8rem; color: var(--muted); line-height: 1.3; }
 
-/* ---------- Moments ---------- */
-.moments { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px; align-items: end; }
-.frame { aspect-ratio: 4 / 5; overflow: hidden; max-width: 100%; background: var(--sage); }
-.frame.arched { border-radius: 999px 999px 0 0; aspect-ratio: 4 / 5.2; }
-.moments figure { margin: 0; display: grid; gap: 8px; }
-.moments figcaption { font-size: .82rem; color: var(--muted); text-align: center; }
+/* ---------- Gallery ---------- */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; width: 100%; margin-top: 10px; }
+.gallery button { padding: 0; border: 0; background: var(--mist); cursor: zoom-in; aspect-ratio: 1240 / 1748; overflow: hidden; border-radius: 4px; max-width: 100%; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.gallery button:hover img { transform: scale(1.03); }
+.lightbox {
+  position: fixed; inset: 0; z-index: 50; background: rgba(36,32,30,.9);
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px;
+  padding: calc(16px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+}
+.lightbox img { max-height: calc(100vh - 80px); max-width: 100%; width: auto; margin: 0 auto; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+.lb-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.08); color: var(--white); cursor: pointer; display: grid; place-items: center; }
+.lb-btn svg { width: 20px; height: 20px; }
+.lb-close { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); }
 
 /* ---------- RSVP ---------- */
+.rsvp .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-items: center; }
+.rsvp .illust { justify-self: center; width: min(100%, 250px); height: auto; }
 .rsvp form { width: min(100%, 420px); display: grid; gap: 12px; margin-top: 6px; }
 .field { position: relative; }
-.field svg { position: absolute; left: 14px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.field > svg { position: absolute; left: 14px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
 .field input, .field select {
-  width: 100%; font: inherit; font-size: .95rem; color: var(--ink);
-  background: var(--white); border: 1px solid transparent; border-radius: 10px;
-  padding: 11px 14px 11px 44px; appearance: none; -webkit-appearance: none;
+  width: 100%; font: inherit; font-size: .95rem; color: var(--ink); background: var(--white);
+  border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px 11px 44px; appearance: none; -webkit-appearance: none;
 }
 .field select { padding-right: 40px; cursor: pointer; }
 .field .chev { left: auto; right: 14px; width: 16px; height: 16px; }
 .field input:focus, .field select:focus { outline: none; border-color: var(--forest); }
-.field input::placeholder { color: #8C968F; }
-.rsvp .btn { justify-content: center; width: 100%; }
-.thanks { background: var(--paper); border-radius: 14px; padding: 18px 22px; width: min(100%, 420px); display: grid; gap: 4px; }
+.field input::placeholder { color: #9A908A; }
+.rsvp .btn { width: 100%; }
+.thanks { background: var(--white); border-radius: 14px; padding: 18px 22px; width: min(100%, 420px); display: grid; gap: 4px; }
 .thanks strong { font-family: var(--display); font-size: 1.5rem; font-weight: 500; color: var(--forest); }
 .err { color: #9B2C24; font-size: .88rem; }
 
 /* ---------- Footer ---------- */
-footer .wrap { padding-block: 44px 52px; }
-.love { font-family: var(--display); font-size: 1.5rem; color: var(--ink); line-height: 1.3; display: grid; justify-items: center; gap: 2px; }
-.love b { font-weight: 500; letter-spacing: .2em; }
-.love svg { width: 14px; height: 14px; color: var(--heart); margin-top: 6px; }
-.foot-row { display: flex; align-items: center; gap: 22px; }
-.foot-row i { width: 70px; height: 1px; background: var(--ink); opacity: .35; }
+footer .wrap { padding-block: 48px 56px; }
+.foot-mono { width: 96px; height: auto; opacity: .9; }
+.love { font-family: var(--script); font-size: 2.6rem; color: var(--ink); line-height: 1; }
+.sorry { color: var(--muted); font-size: .95rem; }
 
 .beat { animation: beat 2.4s ease-in-out infinite; transform-origin: center; }
-@keyframes beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.18); } 24% { transform: scale(1); } }
+@keyframes beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.15); } 24% { transform: scale(1); } }
 
-@media (max-width: 720px) {
-  .venue .wrap { grid-template-columns: 1fr; }
-  .venue .center { order: 0; }
-  .sprig { width: 84px; height: 84px; opacity: .65; }
+@media (max-width: 760px) {
+  .venue .wrap, .rsvp .wrap { grid-template-columns: 1fr; }
+  .rsvp .illust { width: 170px; order: 2; }
+  .sprig { width: 84px; height: 84px; opacity: .55; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-text { padding-block: 16px 8px; }
-  .hero .arch { max-width: 340px; justify-self: center; }
-  .hero .sprig.l { display: none; }
-  .moments { grid-template-columns: 1fr 1fr; }
-  .moments figure:first-child { grid-column: 1 / -1; justify-self: center; width: 70%; }
-  .wrap { padding-block: 44px; }
-  .sprig.hide-sm { display: none; }
+  .hero-text { padding-block: 8px; }
+  .hero .arch { max-width: 360px; justify-self: center; }
+  .hero .sprig.l, .sprig.hide-sm { display: none; }
+  .wrap { padding-block: 48px; }
+  .families { grid-template-columns: 1fr; gap: 10px; }
+  .fam.bride, .fam.groom { text-align: center; }
+  .timeline { grid-template-columns: 1fr; gap: 18px; max-width: 340px; }
+  .timeline::before { left: 97px; right: auto; top: 30px; bottom: 30px; width: 1px; height: auto; }
+  .timeline li { grid-template-columns: 82px 32px 1fr; align-items: center; text-align: left; justify-items: start; padding: 0; }
+  .timeline .pic { height: 70px; width: 82px; place-items: center; }
+  .timeline .pic img { max-height: 66px; }
+  .timeline .dot { margin: 0 0 0 1px; }
+  .count { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; }
+  .count b { font-size: 1.9rem; }
+  .when-card { grid-template-columns: 1fr; gap: 10px; text-align: center; }
+  .when-card i { height: 1px; width: 44px; justify-self: center; }
+  .lightbox { grid-template-columns: 1fr; }
+  .lb-prev, .lb-next { position: absolute; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+  .lb-prev { left: 30%; } .lb-next { right: 30%; }
+  .lightbox img { max-height: calc(100vh - 150px); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .scroll svg, .beat { animation: none; }
-  .btn { transition: none; }
+  .btn, .gallery img { transition: none; }
 }
 </style>
 </head>
 <body>
 
-<!-- ============ Reusable drawings ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- heart -->
     <symbol id="heart" viewBox="-9 -4 18 19"><path fill="currentColor" d="M0 3C0-2-8-3-8 3.2C-8 8-2 11.5 0 14C2 11.5 8 8 8 3.2C8-3 0-2 0 3Z"/></symbol>
-
-    <!-- line-art leaf sprig -->
+    <symbol id="heart-line" viewBox="0 0 50 46"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M25 44C22 36 4 28 4 14 4 6 10 2 16 2c5 0 8 3 9 7 1-4 4-7 9-7 6 0 12 4 12 12 0 12-14 18-18 26"/></symbol>
     <symbol id="sprig" viewBox="0 0 120 120">
       <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
         <path d="M10 112Q50 70 110 10"/>
-        <g fill="rgba(166,187,157,.28)">
+        <g fill="rgba(166,195,165,.28)">
           <g transform="translate(27 93) rotate(-8)"><path d="M0 0Q9-13 0-28Q-9-13 0 0Z"/><path d="M0-2V-25"/></g>
           <g transform="translate(40 80) rotate(88)"><path d="M0 0Q9-13 0-28Q-9-13 0 0Z"/><path d="M0-2V-25"/></g>
           <g transform="translate(55 65) rotate(-2)"><path d="M0 0Q9-13 0-28Q-9-13 0 0Z"/><path d="M0-2V-25"/></g>
@@ -218,100 +253,6 @@ footer .wrap { padding-block: 44px 52px; }
         </g>
       </g>
     </symbol>
-
-    <!-- bouquet -->
-    <symbol id="bouquet" viewBox="0 0 60 74">
-      <path d="M26 44L22 72M30 44V72M34 44L38 72" stroke="#6F8A68" stroke-width="2.4" stroke-linecap="round"/>
-      <path d="M20 52Q30 60 40 52L38 60Q30 64 22 60Z" fill="#F6F0E4" stroke="#D8CCB2"/>
-      <ellipse cx="10" cy="30" rx="10" ry="4.5" fill="#8FAA85" transform="rotate(-30 10 30)"/>
-      <ellipse cx="50" cy="30" rx="10" ry="4.5" fill="#7E957A" transform="rotate(30 50 30)"/>
-      <ellipse cx="14" cy="44" rx="9" ry="4" fill="#7E957A" transform="rotate(20 14 44)"/>
-      <ellipse cx="46" cy="44" rx="9" ry="4" fill="#A6BB9D" transform="rotate(-20 46 44)"/>
-      <g stroke="#DCD2BD" stroke-width="1.1" fill="#FFFFFF">
-        <circle cx="20" cy="22" r="9"/><circle cx="40" cy="22" r="9"/><circle cx="30" cy="14" r="9"/>
-        <circle cx="30" cy="32" r="10"/><circle cx="17" cy="37" r="7.5"/><circle cx="43" cy="37" r="7.5"/>
-      </g>
-      <g fill="none" stroke="#D5C9AE" stroke-width="1.1" stroke-linecap="round">
-        <path d="M17 22a3 3 0 1 1 5 2"/><path d="M37 22a3 3 0 1 1 5 2"/><path d="M27 14a3 3 0 1 1 5 2"/>
-        <path d="M26 32a4 4 0 1 1 7 2.5"/><path d="M15 37a2.5 2.5 0 1 1 4 1.5"/><path d="M41 37a2.5 2.5 0 1 1 4 1.5"/>
-      </g>
-      <g fill="#E9DFB4"><circle cx="24" cy="8" r="2"/><circle cx="37" cy="9" r="2"/><circle cx="10" cy="26" r="1.8"/><circle cx="50" cy="40" r="1.8"/></g>
-    </symbol>
-
-    <!-- chibi couple: groom in cream suit, bride in Thai-style cream dress -->
-    <symbol id="couple" viewBox="0 0 220 240">
-      <!-- shadow -->
-      <ellipse cx="112" cy="228" rx="86" ry="8" fill="#2A372E" opacity=".12"/>
-      <!-- GROOM -->
-      <rect x="58" y="168" width="15" height="54" rx="6" fill="#EAE1CE"/>
-      <rect x="78" y="168" width="15" height="54" rx="6" fill="#EAE1CE"/>
-      <ellipse cx="65" cy="223" rx="11" ry="5" fill="#6B4F3A"/>
-      <ellipse cx="86" cy="223" rx="11" ry="5" fill="#6B4F3A"/>
-      <rect x="38" y="112" width="15" height="52" rx="7" fill="#F3EDE1" stroke="#DCD0B9" transform="rotate(6 45 112)"/>
-      <circle cx="42" cy="166" r="6" fill="#F6D7C3"/>
-      <path d="M47 118Q49 103 75 101Q101 103 103 118L105 178Q75 185 45 178Z" fill="#F4EEE2" stroke="#DCD0B9" stroke-width="1.2"/>
-      <path d="M66 103L75 130L84 103Z" fill="#FFFFFF"/>
-      <path d="M66 103L72 136M84 103L78 136" stroke="#DCD0B9" stroke-width="1.4" fill="none"/>
-      <path d="M69 108L75 111L81 108V114L75 111L69 114Z" fill="#6E8B6A"/>
-      <circle cx="75" cy="146" r="2" fill="#D3C5AA"/><circle cx="75" cy="158" r="2" fill="#D3C5AA"/>
-      <g transform="translate(90 116)"><circle r="4" fill="#FFFFFF" stroke="#D8CCB2"/><ellipse cx="-4" cy="5" rx="4" ry="2" fill="#8FAA85" transform="rotate(-30 -4 5)"/></g>
-      <path d="M99 114Q113 121 120 140L111 146Q105 132 96 127Z" fill="#F4EEE2" stroke="#DCD0B9" stroke-width="1.2"/>
-      <rect x="70" y="92" width="10" height="12" fill="#F1CDB6"/>
-      <circle cx="45" cy="70" r="6" fill="#F3D0BA"/><circle cx="105" cy="70" r="6" fill="#F3D0BA"/>
-      <circle cx="75" cy="68" r="30" fill="#F7DAC6"/>
-      <path d="M44 68Q42 34 75 33Q108 34 106 66Q100 50 86 47Q78 57 58 55Q49 59 44 68Z" fill="#2F2725"/>
-      <path d="M86 47Q92 40 100 44" stroke="#2F2725" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M61 73Q65.5 68.5 70 73M80 73Q84.5 68.5 89 73" stroke="#3A2E2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <ellipse cx="59" cy="81" rx="5.5" ry="3.2" fill="#F2A39A" opacity=".55"/>
-      <ellipse cx="91" cy="81" rx="5.5" ry="3.2" fill="#F2A39A" opacity=".55"/>
-      <path d="M70 84Q75 89 80 84" stroke="#B5655A" stroke-width="2" fill="none" stroke-linecap="round"/>
-
-      <!-- BRIDE -->
-      <ellipse cx="139" cy="224" rx="8" ry="4" fill="#C9B48B"/><ellipse cx="161" cy="224" rx="8" ry="4" fill="#C9B48B"/>
-      <path d="M127 142H173L183 221Q150 228 117 221Z" fill="#F2E9D7" stroke="#DCCDAF" stroke-width="1.2"/>
-      <path d="M145 142H155L159 224Q150 226 141 224Z" fill="#E7DBC2"/>
-      <g fill="#D3BC85"><circle cx="133" cy="170" r="1.4"/><circle cx="167" cy="170" r="1.4"/><circle cx="130" cy="195" r="1.4"/><circle cx="170" cy="195" r="1.4"/><circle cx="150" cy="160" r="1.4"/><circle cx="150" cy="185" r="1.4"/><circle cx="150" cy="208" r="1.4"/></g>
-      <path d="M120 212Q150 218 180 212" stroke="#D3BC85" stroke-width="1.4" fill="none" stroke-dasharray="2 3"/>
-      <path d="M163 104Q179 110 179 130L177 186L166 182L166 120Z" fill="#E8DCC2" stroke="#D6C6A6" stroke-width="1.1"/>
-      <path d="M131 105Q150 98 169 105L173 142H127Z" fill="#F6EFE3" stroke="#DCCDAF" stroke-width="1.1"/>
-      <path d="M131 108L169 102L171 116L135 136Z" fill="#E8DCC2" stroke="#D6C6A6" stroke-width="1.1"/>
-      <g fill="#D3BC85"><circle cx="142" cy="116" r="1.2"/><circle cx="152" cy="111" r="1.2"/><circle cx="162" cy="108" r="1.2"/></g>
-      <rect x="127" y="138" width="46" height="6" rx="2" fill="#CBB27A"/>
-      <path d="M134 107Q121 118 117 138L125 143Q127 129 139 118Z" fill="#F6D7C3"/>
-      <circle cx="117" cy="143" r="6" fill="#F6D7C3"/>
-      <path d="M166 108Q178 120 176 146L168 146Q169 126 162 116Z" fill="#F6D7C3"/>
-      <use href="#bouquet" x="156" y="128" width="40" height="50"/>
-      <rect x="145" y="92" width="10" height="13" fill="#F1CDB6"/>
-      <circle cx="150" cy="66" r="31.5" fill="#2F2725"/>
-      <circle cx="177" cy="50" r="13" fill="#2F2725"/>
-      <g fill="#FFFFFF" stroke="#E2D8C4" stroke-width=".8"><circle cx="184" cy="42" r="4"/><circle cx="189" cy="51" r="3.4"/><circle cx="181" cy="58" r="3"/></g>
-      <circle cx="150" cy="70" r="29" fill="#F7DAC6"/>
-      <path d="M120 70Q120 37 150 36Q180 37 180 66Q169 51 152 50Q136 56 120 70Z" fill="#2F2725"/>
-      <path d="M121 70Q117 88 124 98" stroke="#2F2725" stroke-width="5" fill="none" stroke-linecap="round"/>
-      <circle cx="124" cy="84" r="2" fill="#CBB27A"/>
-      <path d="M136 75Q140.5 70.5 145 75M155 75Q159.5 70.5 164 75" stroke="#3A2E2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <path d="M135 73.5l-2-2M165 73.5l2-2" stroke="#3A2E2A" stroke-width="1.6" stroke-linecap="round"/>
-      <ellipse cx="134" cy="83" rx="5.5" ry="3.2" fill="#F2A39A" opacity=".6"/>
-      <ellipse cx="166" cy="83" rx="5.5" ry="3.2" fill="#F2A39A" opacity=".6"/>
-      <path d="M146 86Q150 90 154 86" stroke="#B5655A" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <!-- heart between them -->
-      <use href="#heart" x="101" y="14" width="22" height="22" color="#C8463D"/>
-    </symbol>
-
-    <!-- garden backdrop pieces -->
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1F3E8"/><stop offset="1" stop-color="#DCE6D1"/></linearGradient>
-    <symbol id="bush" viewBox="0 0 80 40">
-      <path d="M2 40Q0 18 18 16Q22 2 40 6Q56 0 62 16Q80 16 78 40Z" fill="#8FAA85"/>
-      <g fill="#FFFFFF"><circle cx="16" cy="26" r="4"/><circle cx="30" cy="16" r="4.5"/><circle cx="46" cy="22" r="4"/><circle cx="60" cy="28" r="4.5"/><circle cx="38" cy="32" r="3.5"/></g>
-      <g fill="#E9DFB4"><circle cx="16" cy="26" r="1.2"/><circle cx="30" cy="16" r="1.4"/><circle cx="46" cy="22" r="1.2"/><circle cx="60" cy="28" r="1.4"/></g>
-    </symbol>
-    <symbol id="salaroof" viewBox="0 0 100 90">
-      <path d="M50 4L92 52H8Z" fill="#7A5E4A"/>
-      <path d="M50 18L80 52H20Z" fill="#8F735D"/>
-      <path d="M8 52L2 44M92 52L98 44M50 4V-2" stroke="#7A5E4A" stroke-width="3" stroke-linecap="round"/>
-      <rect x="18" y="52" width="64" height="38" fill="#B59A80"/>
-      <rect x="24" y="56" width="6" height="34" fill="#8F735D"/><rect x="47" y="56" width="6" height="34" fill="#8F735D"/><rect x="70" y="56" width="6" height="34" fill="#8F735D"/>
-    </symbol>
   </defs>
 </svg>
 
@@ -320,266 +261,304 @@ footer .wrap { padding-block: 44px 52px; }
   <span class="sprig l" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <div class="wrap">
     <div class="hero-text">
-      <div class="mono" aria-label="S และ B">
-        <span class="s">S</span><span class="b">B</span>
-        <svg class="h beat"><use href="#heart"/></svg>
-        <svg class="tw" aria-hidden="true"><use href="#sprig"/></svg>
-      </div>
-      <p class="label">We are getting married</p>
-      <h1><span>Suphakorn</span><span><span class="amp">&amp;</span> Bongkoch</span></h1>
-      <p class="date-line">13 FEBRUARY 2027</p>
-      <svg width="58" height="22" viewBox="0 0 120 40" aria-hidden="true" style="color:var(--leaf)"><use href="#sprig" x="0" y="-40" width="120" height="120" transform="rotate(45 60 20)"/></svg>
-      <a class="scroll" href="#wedding"><i></i><small>SCROLL</small>
+      <img class="mono" src="images/monogram.webp" width="380" height="300" alt="โลโก้ B♥S">
+      <p class="kindly">kindly join us<br>for the wedding of</p>
+      <h1 class="names">
+        <span class="script">Bongkoch</span>
+        <span class="and">and</span>
+        <span class="script">Suphakorn</span>
+      </h1>
+      <p class="names-th">บงกช &amp; ศุภกร</p>
+      <p class="datebar" aria-label="13 กุมภาพันธ์ 2027"><span>13</span><i></i><span>02</span><i></i><span>2027</span></p>
+      <a class="scroll" href="#countdown"><i></i><small>SCROLL</small>
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4.5L7 9.5L12 4.5"/></svg>
       </a>
     </div>
-
-    <div class="arch" role="img" aria-label="ภาพการ์ตูนเจ้าบ่าวเจ้าสาวในสวน (ภาพชั่วคราว)">
-      <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-        <rect width="300" height="400" fill="url(#sky)"/>
-        <g fill="#C3D3B8"><circle cx="40" cy="150" r="60"/><circle cx="270" cy="120" r="70"/><circle cx="150" cy="170" r="50"/></g>
-        <use href="#salaroof" x="180" y="120" width="110" height="100"/>
-        <g fill="#A3BB98"><circle cx="-10" cy="90" r="70"/><circle cx="60" cy="40" r="50"/><circle cx="310" cy="210" r="50"/></g>
-        <g fill="#8FAA85"><circle cx="20" cy="10" r="50"/><circle cx="110" cy="-10" r="40"/><circle cx="250" cy="0" r="45"/></g>
-        <path d="M0 260Q150 230 300 262V400H0Z" fill="#CFDDBF"/>
-        <path d="M120 400Q140 300 152 252Q166 300 200 400Z" fill="#EFE8D8"/>
-        <use href="#bush" x="-14" y="300" width="120" height="60"/>
-        <use href="#bush" x="200" y="296" width="120" height="60"/>
-        <use href="#couple" x="40" y="148" width="220" height="240"/>
-        <use href="#bush" x="-30" y="350" width="140" height="70"/>
-        <use href="#bush" x="190" y="352" width="140" height="70"/>
-        <g fill="#FFFFFF" opacity=".75"><circle cx="70" cy="200" r="2"/><circle cx="240" cy="240" r="2"/><circle cx="110" cy="130" r="1.6"/></g>
-      </svg>
+    <div class="arch">
+      <img src="images/hero.webp" width="760" height="894" alt="บงกชและศุภกรจับมือกันเดินบนสนามหญ้า">
     </div>
   </div>
 </header>
 
-<!-- ============ OUR WEDDING ============ -->
-<section class="band" id="wedding">
-  <span class="sprig hide-sm" style="left:6%;top:60px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
-  <span class="sprig hide-sm" style="right:6%;top:60px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
+<!-- ============ SAVE THE DATE / COUNTDOWN ============ -->
+<section class="band mist" id="countdown">
   <div class="wrap center">
-    <div class="title-row">
-      <svg class="mini" aria-hidden="true"><use href="#sprig"/></svg>
-      <h2>Our Wedding</h2>
-      <svg class="mini r" aria-hidden="true"><use href="#sprig"/></svg>
+    <p class="label">Save the date</p>
+    <h2>นับถอยหลังสู่วันสำคัญ</h2>
+    <div class="count" id="count">
+      <div><b id="cd-d">–</b><span>วัน</span></div>
+      <div><b id="cd-h">–</b><span>ชั่วโมง</span></div>
+      <div><b id="cd-m">–</b><span>นาที</span></div>
+      <div><b id="cd-s">–</b><span>วินาที</span></div>
     </div>
-    <p class="invite-th">ขอเชิญร่วมเป็นส่วนหนึ่งในวันสำคัญของเรา</p>
-    <hr class="rule">
-    <p class="when">วันเสาร์ที่ 13 กุมภาพันธ์ 2570<br>08.00 น.</p>
+    <p class="count-done" id="count-done" hidden>วันนี้คือวันสำคัญของเรา ♥</p>
     <a class="btn btn-solid" target="_blank" rel="noopener"
-       href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%20Suphakorn%20%26%20Bongkoch&amp;dates=20270213T010000Z/20270213T060000Z&amp;location=%E0%B8%AD.%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%9A%E0%B8%B8%E0%B8%8D%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%87%20%E0%B8%88.%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9A%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B8%B3%E0%B8%A0%E0%B8%B9">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h2M12 14h2M16 14h0M8 17h2M12 17h2"/></svg>
+       href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B8%AA%E0%B8%A1%E0%B8%A3%E0%B8%AA%20%E0%B8%9A%E0%B8%87%E0%B8%81%E0%B8%8A%20%26%20%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%81%E0%B8%A3&amp;dates=20270213T020900Z/20270213T070000Z&amp;details=09.09%20%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%81%0A10.20%20%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%9C%E0%B8%B9%E0%B8%81%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B7%E0%B8%AD%0A12.00%20%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3&amp;location=Hi%20Creek%20Resort%20%26%20Campsite%2C%20Si%20Bun%20Rueang%2C%20Nong%20Bua%20Lam%20Phu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h2M12 14h2M8 17h2M12 17h2"/></svg>
       บันทึกวันสำคัญ
     </a>
   </div>
 </section>
 
+<!-- ============ INVITATION ============ -->
+<section class="band" id="invite">
+  <span class="sprig hide-sm" style="left:4%;top:56px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
+  <span class="sprig hide-sm" style="right:4%;top:56px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
+  <div class="wrap center">
+    <h2>Our Wedding</h2>
+    <hr class="rule">
+    <div class="families">
+      <div class="fam bride">
+        <p class="side">ฝ่ายเจ้าสาว</p>
+        <p>นางศรีสุดา กาติ๊บ <span>(แม่)</span></p>
+        <p>นายศิริ คินธร <span>(ลุง)</span></p>
+      </div>
+      <p class="fam-and">และ</p>
+      <div class="fam groom">
+        <p class="side">ฝ่ายเจ้าบ่าว</p>
+        <p>นางขอนสี โสภาพิกุล <span>(แม่)</span></p>
+        <p>นายศักดิ์ศรี โสภาพิกุล <span>(พ่อ)</span></p>
+      </div>
+    </div>
+    <p class="invite-text">มีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติ<br>เนื่องในพิธีมงคลสมรสระหว่าง</p>
+    <div class="couple-names">
+      <span class="role">the bride</span>
+      <p class="cn">นางสาวบงกช กาติ๊บ <small>(อ้อแอ้)</small></p>
+      <svg class="big-heart beat" aria-hidden="true"><use href="#heart-line"/></svg>
+      <span class="role">the groom</span>
+      <p class="cn">นายศุภกร โสภาพิกุล <small>(น้ำเชี่ยว)</small></p>
+    </div>
+    <div class="when-card">
+      <div class="day"><span>วันเสาร์</span><b>13</b><span>กุมภาพันธ์ 2570</span></div>
+      <i></i>
+      <div class="place">
+        <strong>ณ ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์</strong>
+        <span>อำเภอศรีบุญเรือง จังหวัดหนองบัวลำภู</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ WEDDING DAY ============ -->
-<section class="band">
-  <span class="sprig hide-sm" style="right:3%;top:90px;width:170px;height:170px;transform:rotate(200deg)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
+<section class="band alt" id="schedule">
   <div class="wrap center">
     <h2>Wedding Day</h2>
+    <p class="sub-th">กำหนดการ</p>
     <hr class="rule">
     <ol class="timeline">
       <li>
-        <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="8" r="3.6"/><path d="M11 25c-3 0-5-1-5-2.5S9 20 12 19.5l1-6.5c.4-1.6 1.6-2 3-2s2.6.4 3 2l1 6.5c3 .5 6 1.5 6 3s-2 2.5-5 2.5Z"/><path d="M13 19.5l3 1.5 3-1.5"/></svg>
-        </span>
-        <span><span class="tl-time">08:00</span><span class="tl-what">เริ่มพิธีมงคล</span></span>
+        <span class="pic"><img src="images/ico-khanmak.webp" width="135" height="140" alt=""></span>
+        <span class="dot" aria-hidden="true"></span>
+        <span><span class="tl-time">09.09 น.</span><br><span class="tl-what">พิธีแห่ขันหมาก</span></span>
       </li>
       <li>
-        <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11l6 1.5-1 5a3 3 0 0 1-5.8-1.4Z"/><path d="M10 20.5L8.6 26M6.5 25.5l4.2 1"/><path d="M24 11l-6 1.5 1 5a3 3 0 0 0 5.8-1.4Z"/><path d="M22 20.5l1.4 5.5M25.5 25.5l-4.2 1"/><path d="M16 4v3M12.5 5.5l1.2 2M19.5 5.5l-1.2 2"/></svg>
-        </span>
-        <span><span class="tl-what">ร่วมฉลองความรัก</span></span>
+        <span class="pic"><img src="images/ico-wrist.webp" width="150" height="120" alt=""></span>
+        <span class="dot" aria-hidden="true"></span>
+        <span><span class="tl-time">10.20 น.</span><br><span class="tl-what">พิธีผูกข้อไม้ข้อมือ</span></span>
       </li>
       <li>
-        <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="10" r="3.4"/><circle cx="21" cy="10" r="3.4"/><path d="M5 26v-5a6 6 0 0 1 12 0v5"/><path d="M17.5 17.5A6 6 0 0 1 27 21v5"/><path d="M17.6 10.5c1 3 1 5.5 0 7"/></svg>
-        </span>
-        <span><span class="tl-what">ถ่ายภาพร่วมกัน</span><span class="tl-tbc">เวลาจะแจ้งอีกครั้ง</span></span>
+        <span class="pic"><img src="images/ico-meal.webp" width="115" height="105" alt=""></span>
+        <span class="dot" aria-hidden="true"></span>
+        <span><span class="tl-time">12.00 น.</span><br><span class="tl-what">รับประทานอาหาร</span></span>
       </li>
     </ol>
   </div>
 </section>
 
 <!-- ============ VENUE ============ -->
-<section class="band sage venue">
+<section class="band mist venue" id="venue">
   <span class="sprig" style="left:-10px;bottom:-10px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <div class="wrap">
     <div class="center">
       <h2>The Venue</h2>
       <hr class="rule">
-      <p>อ.ศรีบุญเรือง จ.หนองบัวลำภู</p>
+      <p class="venue-name">Hi Creek Resort &amp; Campsite</p>
+      <p class="venue-th">ไฮครีก รีสอร์ท แอนด์ แค้มป์ไซต์</p>
+      <p class="venue-addr">อำเภอศรีบุญเรือง จังหวัดหนองบัวลำภู</p>
       <a class="btn btn-line" target="_blank" rel="noopener"
-         href="https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%9A%E0%B8%B8%E0%B8%8D%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%87%20%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9A%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B8%B3%E0%B8%A0%E0%B8%B9">
+         href="https://www.google.com/maps/search/?api=1&amp;query=Hi%20Creek%20Resort%20%26%20Campsite%20Si%20Bun%20Rueang%20Nong%20Bua%20Lam%20Phu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
-        ดูแผนที่
+        เปิดแผนที่ Google Maps
       </a>
     </div>
-    <div class="map" role="img" aria-label="ภาพแผนที่ประกอบ">
+    <div class="map" role="img" aria-label="ภาพแผนที่ประกอบ ไฮครีก รีสอร์ท">
       <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
-        <rect width="320" height="200" fill="#E4EBDD"/>
-        <path d="M0 150Q40 130 80 160T160 190V200H0Z" fill="#BFD0B4"/>
-        <path d="M200 0Q230 30 280 20T320 40V0Z" fill="#BFD0B4"/>
-        <path d="M250 200Q240 160 210 150T170 120Q150 110 120 125" fill="none" stroke="#B7CCD6" stroke-width="12" stroke-linecap="round"/>
+        <rect width="320" height="200" fill="#EDF1EA"/>
+        <path d="M0 150Q40 130 80 160T160 190V200H0Z" fill="#C6D8C3"/>
+        <path d="M200 0Q230 30 280 20T320 40V0Z" fill="#C6D8C3"/>
+        <path d="M250 200Q240 160 210 150T170 120Q150 110 120 125" fill="none" stroke="#BCD0D8" stroke-width="12" stroke-linecap="round"/>
         <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round">
-          <path d="M0 70Q80 60 140 90T320 110"/>
-          <path d="M150 0Q140 60 150 100T130 200"/>
-          <path d="M40 0Q60 50 30 120T60 200"/>
-          <path d="M210 0Q230 70 270 120T300 200"/>
+          <path d="M0 70Q80 60 140 90T320 110"/><path d="M150 0Q140 60 150 100T130 200"/>
+          <path d="M40 0Q60 50 30 120T60 200"/><path d="M210 0Q230 70 270 120T300 200"/>
           <path d="M150 100Q200 140 320 160" stroke-width="3"/>
         </g>
-        <g fill="#8FAA85"><path d="M60 40l9 20H51Z"/><path d="M74 46l8 18H66Z"/><path d="M268 70l9 20h-18Z"/><path d="M290 140l7 16h-14Z"/><path d="M20 170l8 18H12Z"/></g>
-        <ellipse cx="150" cy="98" rx="18" ry="6" fill="#24402F" opacity=".14"/>
-        <path d="M150 96s-14-14-14-25a14 14 0 0 1 28 0c0 11-14 25-14 25Z" fill="#24402F"/>
-        <circle cx="150" cy="71" r="5" fill="#E4EBDD"/>
+        <path d="M232 60l18-30 18 30Z M256 60l14-22 14 22Z" fill="#A9B8A6"/>
+        <g fill="#8FAE8E"><path d="M60 40l9 20H51Z"/><path d="M74 46l8 18H66Z"/><path d="M290 140l7 16h-14Z"/><path d="M20 170l8 18H12Z"/></g>
+        <path d="M100 150l10-14 10 14Z" fill="#B76A64" opacity=".7"/>
+        <ellipse cx="150" cy="98" rx="18" ry="6" fill="#46574A" opacity=".14"/>
+        <path d="M150 96s-14-14-14-25a14 14 0 0 1 28 0c0 11-14 25-14 25Z" fill="#46574A"/>
+        <circle cx="150" cy="71" r="5" fill="#EDF1EA"/>
+        <rect x="166" y="62" width="74" height="20" rx="10" fill="#FFFFFF"/>
+        <text x="203" y="76" text-anchor="middle" font-family="Anuphan, sans-serif" font-size="10" fill="#4E403B">Hi Creek</text>
       </svg>
     </div>
   </div>
 </section>
 
-<!-- ============ DRESS CODE ============ -->
-<section class="band">
+<!-- ============ COLOR THEME ============ -->
+<section class="band" id="colors">
   <span class="sprig hide-sm" style="left:8%;top:60px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <span class="sprig hide-sm" style="right:8%;top:60px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <div class="wrap center">
-    <h2>Dress Code</h2>
+    <h2>Color Theme</h2>
     <div class="heart-rule" aria-hidden="true"><i></i><svg><use href="#heart"/></svg><i></i></div>
+    <p class="sub-th">ร่วมแต่งกายโทนสีของงาน</p>
     <div class="swatches">
-      <span class="swatch" style="background:#A9C0A0" title="Sage"></span>
-      <span class="swatch" style="background:#EADFCB" title="Cream"></span>
-      <span class="swatch" style="background:#FFFFFF" title="White"></span>
+      <span class="swatch"><i style="background:#687665"></i><span>เขียวมอส</span></span>
+      <span class="swatch"><i style="background:#A6C3A5"></i><span>เขียวเสจ</span></span>
+      <span class="swatch"><i style="background:#D7DED6"></i><span>เขียวหมอก</span></span>
+      <span class="swatch"><i style="background:#F2E9DA"></i><span>ครีม</span></span>
+      <span class="swatch"><i style="background:#B76A64"></i><span>ชมพูอิฐ</span></span>
     </div>
-    <p class="label" style="color:var(--ink)">Sage &nbsp;•&nbsp; Cream &nbsp;•&nbsp; White</p>
   </div>
 </section>
 
 <!-- ============ OUR MOMENTS ============ -->
-<section class="band alt">
+<section class="band alt" id="moments">
   <div class="wrap center">
     <h2>Our Moments</h2>
     <hr class="rule">
-    <div class="moments">
-      <figure>
-        <div class="frame arched" role="img" aria-label="การ์ตูนเจ้าบ่าวเจ้าสาวเดินในสวน (ภาพชั่วคราว)">
-          <svg viewBox="0 0 200 260" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="260" fill="url(#sky)"/>
-            <g fill="#A3BB98"><circle cx="0" cy="80" r="60"/><circle cx="200" cy="70" r="60"/></g>
-            <g fill="#8FAA85"><circle cx="30" cy="10" r="45"/><circle cx="170" cy="0" r="45"/></g>
-            <path d="M0 170Q100 150 200 170V260H0Z" fill="#CFDDBF"/>
-            <path d="M70 260L94 160H108L134 260Z" fill="#EFE8D8"/>
-            <use href="#bush" x="-20" y="170" width="90" height="45"/>
-            <use href="#bush" x="130" y="168" width="90" height="45"/>
-            <use href="#couple" x="30" y="100" width="140" height="153"/>
-            <use href="#bush" x="-26" y="222" width="100" height="50"/>
-            <use href="#bush" x="126" y="222" width="100" height="50"/>
-          </svg>
-        </div>
-      </figure>
-      <figure>
-        <div class="frame" role="img" aria-label="การ์ตูนช่อดอกไม้สีขาว (ภาพชั่วคราว)">
-          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="250" fill="#EFE7D7"/>
-            <g stroke="#E0D3B8" stroke-width="1"><path d="M0 40H200M0 90H200M0 140H200M0 190H200M0 240H200" stroke-dasharray="3 5"/></g>
-            <path d="M20 0Q60 120 30 250H0V0Z" fill="#E6D9BE"/>
-            <path d="M200 0Q150 130 180 250H200Z" fill="#E6D9BE"/>
-            <use href="#bouquet" x="38" y="32" width="124" height="153"/>
-            <ellipse cx="96" cy="176" rx="22" ry="12" fill="#F6D7C3"/>
-            <ellipse cx="112" cy="168" rx="18" ry="10" fill="#F3D0BA"/>
-            <g color="#C8463D" opacity=".85"><use href="#heart" x="150" y="30" width="16" height="16"/><use href="#heart" x="30" y="60" width="12" height="12"/></g>
-          </svg>
-        </div>
-      </figure>
-      <figure>
-        <div class="frame" role="img" aria-label="การ์ตูนคู่บ่าวสาวยิ้มหวาน (ภาพชั่วคราว)">
-          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="250" fill="url(#sky)"/>
-            <g fill="#A3BB98"><circle cx="10" cy="40" r="50"/><circle cx="190" cy="50" r="55"/></g>
-            <path d="M0 200Q100 180 200 200V250H0Z" fill="#CFDDBF"/>
-            <use href="#couple" x="-30" y="20" width="260" height="284"/>
-            <use href="#bush" x="-20" y="205" width="100" height="50"/>
-            <use href="#bush" x="130" y="208" width="100" height="50"/>
-            <g color="#C8463D"><use href="#heart" x="22" y="28" width="14" height="14"/><use href="#heart" x="166" y="36" width="12" height="12"/><use href="#heart" x="176" y="12" width="9" height="9"/></g>
-          </svg>
-        </div>
-      </figure>
+    <div class="gallery" id="gallery">
+      <button type="button" data-full="images/card-hand.webp"><img src="images/card-hand-sm.webp" width="440" height="620" alt="จับมือกันเดินบนสนามหญ้า หน้าภูเขา" loading="lazy"></button>
+      <button type="button" data-full="images/card-save.webp"><img src="images/card-save-sm.webp" width="440" height="620" alt="การ์ด Save the date" loading="lazy"></button>
+      <button type="button" data-full="images/card-lift.webp"><img src="images/card-lift-sm.webp" width="440" height="620" alt="เจ้าบ่าวอุ้มเจ้าสาวชูช่อดอกไม้" loading="lazy"></button>
+      <button type="button" data-full="images/card-blur.webp"><img src="images/card-blur-sm.webp" width="440" height="620" alt="Save the date ภาพคู่ใกล้ชิด" loading="lazy"></button>
+      <button type="button" data-full="images/card-veil.webp"><img src="images/card-veil-sm.webp" width="440" height="620" alt="ภาพคู่ใต้ผ้าคลุมเจ้าสาว" loading="lazy"></button>
+      <button type="button" data-full="images/card-illust.webp"><img src="images/card-illust-sm.webp" width="440" height="620" alt="การ์ดภาพวาดสีน้ำคู่บ่าวสาว" loading="lazy"></button>
     </div>
-    <p class="tl-tbc">ภาพการ์ตูนเป็นภาพชั่วคราว จะเปลี่ยนเป็นภาพจริงภายหลัง</p>
+    <p class="sub-th">แตะที่ภาพเพื่อดูขนาดใหญ่</p>
   </div>
 </section>
 
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ดูภาพขนาดใหญ่">
+  <button class="lb-btn lb-prev" type="button" aria-label="ภาพก่อนหน้า"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12.5 4L6.5 10l6 6"/></svg></button>
+  <img id="lb-img" src="images/card-hand.webp" alt="">
+  <button class="lb-btn lb-next" type="button" aria-label="ภาพถัดไป"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7.5 4l6 6-6 6"/></svg></button>
+  <button class="lb-btn lb-close" type="button" aria-label="ปิด"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+</div>
+
 <!-- ============ RSVP ============ -->
-<section class="band sage rsvp" id="rsvp">
-  <span class="sprig hide-sm" style="left:8%;top:80px;width:90px;height:90px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
-  <span class="sprig hide-sm" style="right:8%;top:80px;width:90px;height:90px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
-  <div class="wrap center">
-    <h2>Be Our Guest</h2>
-    <hr class="rule">
-    <p>ยืนยันการเข้าร่วมงาน</p>
-    <form id="rsvp-form" novalidate>
-      <div class="field">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        <input id="guest-name" name="name" type="text" placeholder="ชื่อ - นามสกุล" autocomplete="name" aria-label="ชื่อ - นามสกุล" required>
+<section class="band rsvp" id="rsvp">
+  <div class="wrap">
+    <img class="illust" src="images/couple-illust.webp" width="394" height="806" alt="ภาพวาดสีน้ำ เจ้าบ่าวอุ้มเจ้าสาว">
+    <div class="center">
+      <h2>Be Our Guest</h2>
+      <hr class="rule">
+      <p>ยืนยันการเข้าร่วมงาน</p>
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <input id="guest-name" name="guest" type="text" placeholder="ชื่อ - นามสกุล" autocomplete="name" aria-label="ชื่อ - นามสกุล" required>
+        </div>
+        <div class="field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.4c3.3-.6 6 1.8 6 5.6"/></svg>
+          <select id="guest-count" name="count" aria-label="จำนวนผู้เข้าร่วม (คน)" required>
+            <option value="" selected disabled>จำนวนผู้เข้าร่วม (คน)</option>
+            <option value="1">1 คน</option><option value="2">2 คน</option><option value="3">3 คน</option>
+            <option value="4">4 คน</option><option value="5">5 คนขึ้นไป</option>
+            <option value="0">ขออภัย ไม่สะดวกมาร่วมงาน</option>
+          </select>
+          <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>
+        </div>
+        <p class="err" id="rsvp-err" hidden></p>
+        <button class="btn btn-solid" type="submit">ยืนยันร่วมงาน</button>
+      </form>
+      <div class="thanks" id="rsvp-thanks" hidden aria-live="polite">
+        <strong>ขอบคุณค่ะ</strong>
+        <p id="rsvp-msg"></p>
       </div>
-      <div class="field">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.4c3.3-.6 6 1.8 6 5.6"/></svg>
-        <select id="guest-count" name="count" aria-label="จำนวนผู้เข้าร่วม (คน)" required>
-          <option value="" selected disabled>จำนวนผู้เข้าร่วม (คน)</option>
-          <option value="1">1 คน</option><option value="2">2 คน</option><option value="3">3 คน</option>
-          <option value="4">4 คน</option><option value="5">5 คนขึ้นไป</option>
-          <option value="0">ขออภัย ไม่สะดวกมาร่วมงาน</option>
-        </select>
-        <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg>
-      </div>
-      <p class="err" id="rsvp-err" hidden></p>
-      <button class="btn btn-solid" type="submit">ยืนยันร่วมงาน</button>
-    </form>
-    <div class="thanks" id="rsvp-thanks" hidden aria-live="polite">
-      <strong>ขอบคุณค่ะ</strong>
-      <p id="rsvp-msg"></p>
     </div>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="band">
+<footer class="band mist">
   <span class="sprig" style="left:-14px;bottom:-14px;width:130px;height:130px;transform:scaleX(-1)" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <span class="sprig" style="right:-14px;bottom:-14px;width:130px;height:130px" aria-hidden="true"><svg><use href="#sprig"/></svg></span>
   <div class="wrap center">
-    <div class="foot-row">
-      <i></i>
-      <div class="love">
-        <span>With love,</span>
-        <b>S &amp; B</b>
-        <svg class="beat" aria-hidden="true"><use href="#heart"/></svg>
-      </div>
-      <i></i>
-    </div>
+    <img class="foot-mono" src="images/monogram.webp" width="380" height="300" alt="">
+    <p class="love">With love, B &amp; S</p>
+    <p class="sorry">(ขออภัยหากมิได้มาเรียนเชิญด้วยตนเอง)</p>
   </div>
 </footer>
 
 <script>
 (function () {
+  /* countdown to 13 Feb 2027, 09:09 Thailand time */
+  var target = Date.parse('2027-02-13T09:09:00+07:00');
+  var els = ['d', 'h', 'm', 's'].map(function (k) { return document.getElementById('cd-' + k); });
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+  function tick() {
+    var diff = Math.max(0, target - Date.now());
+    if (diff === 0) {
+      document.getElementById('count').hidden = true;
+      document.getElementById('count-done').hidden = false;
+      return;
+    }
+    var s = Math.floor(diff / 1000);
+    els[0].textContent = Math.floor(s / 86400);
+    els[1].textContent = pad(Math.floor(s % 86400 / 3600));
+    els[2].textContent = pad(Math.floor(s % 3600 / 60));
+    els[3].textContent = pad(s % 60);
+    setTimeout(tick, 1000 - (Date.now() % 1000));
+  }
+  tick();
+
+  /* gallery lightbox */
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('#gallery button'));
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var current = 0, opener = null;
+  function show(i) {
+    current = (i + buttons.length) % buttons.length;
+    var b = buttons[current];
+    lbImg.src = b.getAttribute('data-full');
+    lbImg.alt = b.querySelector('img').alt;
+  }
+  function close() { lb.hidden = true; document.body.style.overflow = ''; if (opener) opener.focus(); }
+  buttons.forEach(function (b, i) {
+    b.addEventListener('click', function () {
+      opener = b; show(i); lb.hidden = false; document.body.style.overflow = 'hidden';
+      lb.querySelector('.lb-close').focus();
+    });
+  });
+  lb.querySelector('.lb-prev').addEventListener('click', function () { show(current - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function () { show(current + 1); });
+  lb.querySelector('.lb-close').addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+
+  /* RSVP: no backend yet, shows a confirmation only */
   var form = document.getElementById('rsvp-form');
   var err = document.getElementById('rsvp-err');
-  var thanks = document.getElementById('rsvp-thanks');
-  var msg = document.getElementById('rsvp-msg');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var nameEl = document.getElementById('guest-name');
     var countEl = document.getElementById('guest-count');
-    var name = nameEl.value.trim();
-    var count = countEl.value;
+    var name = nameEl.value.trim(), count = countEl.value;
     if (!name) { err.textContent = 'กรุณากรอกชื่อ - นามสกุล'; err.hidden = false; nameEl.focus(); return; }
     if (count === '') { err.textContent = 'กรุณาเลือกจำนวนผู้เข้าร่วม'; err.hidden = false; countEl.focus(); return; }
     err.hidden = true;
-    msg.textContent = count === '0'
+    document.getElementById('rsvp-msg').textContent = count === '0'
       ? 'คุณ' + name + ' ไม่สะดวกมาร่วมงาน ขอบคุณที่แจ้งให้ทราบนะคะ'
-      : 'คุณ' + name + ' ยืนยันร่วมงาน ' + (count === '5' ? '5 คนขึ้นไป' : count + ' คน') + ' แล้วพบกันวันที่ 13 กุมภาพันธ์ 2570 ค่ะ';
+      : 'คุณ' + name + ' ยืนยันร่วมงาน ' + (count === '5' ? '5 คนขึ้นไป' : count + ' คน') + ' แล้วพบกันวันเสาร์ที่ 13 กุมภาพันธ์ 2570 ค่ะ';
     form.hidden = true;
-    thanks.hidden = false;
+    document.getElementById('rsvp-thanks').hidden = false;
   });
 })();
 </script>
