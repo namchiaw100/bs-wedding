@@ -163,12 +163,10 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .fam.groom { text-align: left; }
 .fam-and { font-size: 1.1rem; color: var(--muted); }
 .invite-text { max-width: 34em; font-size: 1.04rem; margin-top: 10px; }
-.pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; width: 100%; max-width: 680px; margin-top: 8px; }
-.person { display: grid; justify-items: center; gap: 10px; min-width: 0; }
-.person .ph { width: 100%; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 999px 999px 10px 10px; overflow: hidden; background: var(--mist); box-shadow: 0 0 0 5px var(--paper), 0 0 0 6px var(--line); }
-.person .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+.pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; width: 100%; max-width: 680px; margin-top: 8px; }
+.person { display: grid; justify-items: center; gap: 4px; min-width: 0; }
 .person .role { font-family: var(--display); font-style: italic; color: var(--moss); font-size: 1rem; letter-spacing: .1em; }
-.person .th { font-size: clamp(1rem, 2.8vw, 1.2rem); font-weight: 500; line-height: 1.45; }
+.person .th { font-size: clamp(1.1rem, 3.4vw, 1.5rem); font-weight: 500; line-height: 1.45; }
 .person .th small { display: block; font-weight: 400; color: var(--muted); font-size: .86em; }
 .person .en { font-family: var(--display); font-weight: 600; letter-spacing: .24em; font-size: .78rem; color: var(--muted); }
 .pair-mid { display: grid; justify-items: center; gap: 6px; color: var(--muted); font-size: .95rem; }
@@ -300,7 +298,7 @@ footer.site .wrap { padding-block: 48px 72px; }
   .wrap { padding-block: 48px; }
   .families { grid-template-columns: 1fr; gap: 10px; }
   .fam.bride, .fam.groom { text-align: center; }
-  .pair { gap: 8px; }
+  .pair { grid-template-columns: 1fr; gap: 6px; }
   .pair-mid span { display: none; }
   .pair-mid svg { width: 26px; height: 24px; }
   .person .en { letter-spacing: .14em; font-size: .7rem; }
@@ -457,14 +455,12 @@ footer.site .wrap { padding-block: 48px 72px; }
     <div class="pair">
       <div class="person">
         <span class="role">the bride</span>
-        <div class="ph"><img src="images/bride.webp" width="360" height="480" alt="เจ้าสาว บงกช"></div>
         <p class="th">นางสาวบงกช กาติ๊บ<small>(อ้อแอ้)</small></p>
         <p class="en">BONGKOCH</p>
       </div>
       <div class="pair-mid"><span>ระหว่าง</span><svg class="beat" aria-hidden="true"><use href="#heart-line"/></svg></div>
       <div class="person">
         <span class="role">the groom</span>
-        <div class="ph"><img src="images/groom.webp" width="360" height="480" alt="เจ้าบ่าว ศุภกร"></div>
         <p class="th">นายศุภกร โสภาพิกุล<small>(น้ำเชี่ยว)</small></p>
         <p class="en">SUPHAKORN</p>
       </div>
