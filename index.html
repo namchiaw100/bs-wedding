@@ -151,6 +151,7 @@ h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
 .count div { background: var(--paper); border-radius: 12px; padding: 12px 6px 8px; display: grid; gap: 2px; }
 .count b { font-family: var(--display); font-weight: 500; font-size: 2.3rem; line-height: 1; color: var(--forest); font-variant-numeric: lining-nums tabular-nums; }
 .count span { font-size: .82rem; color: var(--muted); }
+.h-th { font-family: var(--body); font-weight: 500; color: var(--ink); font-size: clamp(1.4rem, 4.4vw, 1.9rem); line-height: 1.4; }
 .count-done { font-family: var(--display); font-size: 1.5rem; color: var(--forest); }
 
 /* ---------- Invitation + bride & groom ---------- */
@@ -417,7 +418,7 @@ footer.site .wrap { padding-block: 48px 72px; }
 <section class="band mist" id="countdown">
   <div class="wrap center">
     <p class="caps" style="font-size:.8rem;color:var(--muted)">Save the date</p>
-    <h2>นับถอยหลังสู่วันสำคัญ</h2>
+    <h2 class="h-th">นับถอยหลังสู่วันสำคัญ</h2>
     <div class="count" id="count">
       <div><b id="cd-d">–</b><span>วัน</span></div>
       <div><b id="cd-h">–</b><span>ชั่วโมง</span></div>
@@ -425,11 +426,6 @@ footer.site .wrap { padding-block: 48px 72px; }
       <div><b id="cd-s">–</b><span>วินาที</span></div>
     </div>
     <p class="count-done" id="count-done" hidden>วันนี้คือวันสำคัญของเรา ♥</p>
-    <a class="btn btn-solid" target="_blank" rel="noopener"
-       href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B8%AA%E0%B8%A1%E0%B8%A3%E0%B8%AA%20%E0%B8%9A%E0%B8%87%E0%B8%81%E0%B8%8A%20%26%20%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%81%E0%B8%A3&amp;dates=20270213T020900Z/20270213T070000Z&amp;details=09.09%20%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%81%0A10.20%20%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%9C%E0%B8%B9%E0%B8%81%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B7%E0%B8%AD%0A12.00%20%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3&amp;location=Hi%20Creek%20Resort%20%26%20Campsite%2C%20Si%20Bun%20Rueang%2C%20Nong%20Bua%20Lam%20Phu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h2M12 14h2M8 17h2M12 17h2"/></svg>
-      บันทึกวันสำคัญ
-    </a>
   </div>
 </section>
 
