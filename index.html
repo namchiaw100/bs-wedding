@@ -350,7 +350,7 @@ footer.site .wrap { padding-block: 48px 72px; }
   </defs>
 </svg>
 
-<audio id="song" src="music/song.mp3" preload="metadata"></audio>
+<audio id="song" src="music/song.mp3" preload="auto"></audio>
 
 <!-- ============ HERO + PLAYER ============ -->
 <header class="hero" id="top">
@@ -698,16 +698,42 @@ var RSVP_ENDPOINT = '';
   if (song.error) noSong();
   song.addEventListener('error', noSong);
   function play() {
-    if (!songOk) return;
+    if (!songOk) return Promise.resolve(false);
     var first = !started;
     if (first) song.volume = 0;
     var p = song.play();
-    if (p && p.then) p.then(function () {
-      started = true; fab.hidden = false;
+    if (!p || !p.then) return Promise.resolve(true);
+    return p.then(function () {
+      started = true; fab.hidden = false; $('hint').hidden = true;
       if (first) { var v = 0, f = setInterval(function () { v = Math.min(0.85, v + 0.05); song.volume = v; if (v >= 0.85) clearInterval(f); }, 120); }
-    }).catch(function (e) { setPlaying(false); if (song.error || (e && e.name === 'NotSupportedError')) noSong(); });
+      return true;
+    }).catch(function (e) {
+      setPlaying(false);
+      if (song.error || (e && e.name === 'NotSupportedError')) noSong();
+      return false;
+    });
   }
-  function toggle() { if (song.paused) play(); else song.pause(); }
+  var userPaused = false;
+  function toggle() {
+    if (song.paused) { userPaused = false; play(); }
+    else { userPaused = true; song.pause(); }
+  }
+
+  /* autoplay: try as soon as the page opens; if the browser blocks sound,
+     start on the guest's first tap / click / key press anywhere on the page */
+  var GESTURES = ['pointerdown', 'touchend', 'click', 'keydown'];
+  function onFirstGesture(e) {
+    if (e.target.closest && e.target.closest('#btn-play, #music-fab')) { disarm(); return; }
+    if (userPaused || started) { disarm(); return; }
+    play().then(function (ok) { if (ok) disarm(); });
+  }
+  function arm() { GESTURES.forEach(function (g) { document.addEventListener(g, onFirstGesture, true); }); }
+  function disarm() { GESTURES.forEach(function (g) { document.removeEventListener(g, onFirstGesture, true); }); }
+  arm();
+  play().then(function (ok) {
+    if (ok) { disarm(); return; }
+    if (songOk) $('hint').innerHTML = 'แตะที่ใดก็ได้บนหน้าจอ เพลงจะเริ่มเล่นทันที ♪';
+  });
   btnPlay.addEventListener('click', toggle);
   fab.addEventListener('click', toggle);
   song.addEventListener('play', function () { setPlaying(true); });
