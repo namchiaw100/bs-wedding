@@ -626,16 +626,6 @@ footer.site .wrap { padding-block: 48px 72px; }
             <button type="button" id="c-plus" aria-label="เพิ่มจำนวน">+</button>
           </div>
         </div>
-        <fieldset class="q">
-          <legend>อาหารที่ทานไม่ได้ / แพ้ <span class="opt-note">(เลือกได้หลายข้อ)</span></legend>
-          <div class="chips">
-            <label class="chip"><input type="checkbox" name="diet" value="ไม่ทานเนื้อวัว"><span>ไม่ทานเนื้อวัว</span></label>
-            <label class="chip"><input type="checkbox" name="diet" value="ไม่ทานหมู"><span>ไม่ทานหมู</span></label>
-            <label class="chip"><input type="checkbox" name="diet" value="มังสวิรัติ / เจ"><span>มังสวิรัติ / เจ</span></label>
-            <label class="chip"><input type="checkbox" name="diet" value="แพ้อาหารทะเล"><span>แพ้อาหารทะเล</span></label>
-            <label class="chip"><input type="checkbox" name="diet" value="ฮาลาล"><span>ฮาลาล</span></label>
-          </div>
-        </fieldset>
       </div>
 
       <div class="q">
@@ -901,7 +891,7 @@ var RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx0JkLQeYfKkWyp0au0
       name: name, attend: attend, side: side,
       party: attend === 'yes' ? radio('party') : '',
       guests: attend === 'yes' ? count : 0,
-      diet: attend === 'yes' ? Array.prototype.map.call(form.querySelectorAll('input[name="diet"]:checked'), function (c) { return c.value; }).join(', ') : '',
+      diet: '',
       wish: $('f-wish').value.trim().slice(0, 300),
       time: Date.now()
     };
